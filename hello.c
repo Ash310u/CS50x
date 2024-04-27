@@ -3,9 +3,10 @@
 
 int main(void) {
     // string answer = get_string("What is your name? ");
-    int answer = get_int("Guess a Number? ");
     int num = 58;
-    if(num )
+    int answer = get_int("Guess a Number? ");
+    if (answer < num)
+    if(num == answer)
     {
         printf("Ta-dha ")
     }
