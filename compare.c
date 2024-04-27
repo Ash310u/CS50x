@@ -8,13 +8,12 @@ int main(void) {
     {
         printf("Guess number is lesser than Orginal number \n");
         guess = get_int("Guess a Number? ");
-    } else if(guess > num)
+    }
+    if(guess > num)
     {
         printf("Guess number is greater than Orginal number \n");
         guess = get_int("Guess a Number? ");
-    } else
-    {
-        printf("Ta-dha %i\n", guess);
     }
+    printf("Ta-daa %i\n", guess);
    return 0;
 }
