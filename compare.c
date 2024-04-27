@@ -7,12 +7,10 @@ int main(void) {
     if (guess < num)
     {
         printf("Guess number is lesser than Orginal number \n");
-        guess = get_int("Guess a Number? ");
     }
     if(guess > num)
     {
         printf("Guess number is greater than Orginal number \n");
-        guess = get_int("Guess a Number? ");
     }
     printf("Ta-daa %i\n", guess);
    return 0;
