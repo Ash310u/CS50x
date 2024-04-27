@@ -7,15 +7,14 @@ int main(void)
     int y = get_int("What's y ? ");
     if (x < y)
     {
-        printf("x number is lesser than y\n");
+        return printf("x is lesser than y\n");
     }
     if (x > y)
     {
-        printf("x number is greater than y\n");
-    }
-    else
+        return printf("x is greater than y\n");
+    } else
     {
-        printf("x is equal to y\n");
+        return printf("x is equal to y\n");
     }
     return 0;
 }
