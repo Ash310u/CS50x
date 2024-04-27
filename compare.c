@@ -3,7 +3,7 @@
 
 int main(void) {
     int num = 58;
-    int guess = get_int("Guess a Number? ");
+    int guess = get_int("Guess a Number? (You Have Three Chances) Your Answer -> ");
     if (guess < num)
     {
         printf("Guess number is lesser than Orginal number \n");
