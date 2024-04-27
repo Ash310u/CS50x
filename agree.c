@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    char c = get_char("Do you agree , y/n ");
+    char c = get_char("Do you agree.");
 
-        if (c == 'y' | 'Y')
+        if (c == 'y' || c == 'Y')
     {
         printf("Agreed.\n");
     }
-    else if (c == 'n' | 'N' )
+    else if (c == 'n' || c == 'N' )
     {
         printf("Not agreed.\n");
     }
