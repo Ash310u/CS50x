@@ -1,5 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main() {
-    printf("hello, world \n");
+int main(void) {
+    string ans = "Ashu";
+    printf("hello, %s\n", non);
+   return 0;
 }
