@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-    string ans = "Ashu";
-    printf("hello, %s\n", non);
+    string ans = get_string("What is your name?\n");
+    printf("hello, %s\n", ans);
    return 0;
 }
