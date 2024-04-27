@@ -4,12 +4,17 @@
 int main(void) {
     // string answer = get_string("What is your name? ");
     int num = 58;
-    int answer = get_int("Guess a Number? ");
-    if (answer < num)
-    if(num == answer)
+    int guess = get_int("Guess a Number? ");
+    if (guess < num)
     {
-        printf("Ta-dha ")
+        printf("Guess number is lesser than Orginal number \n");
+        guess = get_int("Guess a Number? ");
+    } else if(guess > num)
+    {
+        printf("Guess number is greater than Orginal number \n");
+    }if(num == guess)
+    {
+        printf("Ta-dha %i\n", guess);
     }
-    printf("hello, %s\n", answer);
    return 0;
 }
