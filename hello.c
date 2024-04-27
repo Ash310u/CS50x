@@ -12,6 +12,7 @@ int main(void) {
     } else if(guess > num)
     {
         printf("Guess number is greater than Orginal number \n");
+        guess = get_int("Guess a Number? ");
     }if(num == guess)
     {
         printf("Ta-dha %i\n", guess);
