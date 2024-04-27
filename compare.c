@@ -16,6 +16,5 @@ int main(void) {
     {
         printf("Ta-dha %i\n", guess);
     }
-    guess = get_int("Guess a Number? ");
    return 0;
 }
