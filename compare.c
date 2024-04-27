@@ -1,17 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void) {
-    int num = 58;
-    int guess = get_int("Guess a Number? (You Have Three Chances) Your Answer -> ");
-    if (guess < num)
+int main(void)
+{
+    int x = get_int("What's x ? ");
+    int y = get_int("What's y ? ");
+    if (x < y)
     {
-        printf("Guess number is lesser than Orginal number \n");
+        printf("x number is lesser than y\n");
     }
-    if(guess > num)
+    if (x > y)
     {
-        printf("Guess number is greater than Orginal number \n");
+        printf("x number is greater than y\n");
     }
-    printf("Ta-daa %i\n", guess);
-   return 0;
+    else
+    {
+        printf("x is equal to y\n");
+    }
+    return 0;
 }
