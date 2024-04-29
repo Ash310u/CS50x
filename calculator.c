@@ -6,10 +6,11 @@ int  main (void)
 {
     int x = get_int("x: ");
     int y = get_int("y: ");
-    addition(x,y);
+    int z = addition(x,y);
+    printf("%i\n", z);
 }
 
 int addition (int x, int y)
 {
-    printf("%i\n", x + y);
+    return x + y;
 }
