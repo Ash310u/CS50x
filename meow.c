@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void meow(n);
+void meow(int n);
 
 int main(void)
 {
@@ -10,10 +10,10 @@ int main(void)
     //     i++;
     // }
 
-    meow(10);
+    meow(3);
 }
 
-void meow(n)
+void meow(int n)
 {
     for (int i = 0; i < n; i++)
     {
