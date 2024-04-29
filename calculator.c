@@ -7,10 +7,10 @@ int  main (void)
     int x = get_int("x: ");
     int y = get_int("y: ");
     int z = addition(x,y);
-    printf("%i\n ", z);
+    printf("%i\n", z);
 }
 
-int addition (int x, int y)
+int addition (int a, int b)
 {
-    return x + y;
+    return a + b;
 }
