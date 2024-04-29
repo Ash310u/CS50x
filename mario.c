@@ -3,6 +3,7 @@
 
 int main (void)
 {
+    // Promt User for positive integer
     int n;
     do
     {
