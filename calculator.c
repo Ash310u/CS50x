@@ -17,8 +17,8 @@ int  main (void)
     //////////////////////////////////////////////////////////////////////////////////////
 
     // float z = (float) x / (float) y;
-    // "%.5f" it means show me 5 decimal places
-    // printf("%.2f\n", z);
+    // // "%.5f" it means show me 5 decimal places
+    // printf("%.20f\n", z);
 
     double z = (double) x / (double) y;
     // "%.5f" this format specifiers will work for "Double" also
