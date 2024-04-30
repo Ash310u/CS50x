@@ -8,6 +8,7 @@ int  main (void)
     int y = get_int("y: ");
     // printf("%i\n", addition(x,y));
 
+    // (Type casting) treating one type as an another type
     float z = (float) x / (float) y;
     printf("%f\n", z);
 }
