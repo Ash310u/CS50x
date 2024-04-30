@@ -8,7 +8,9 @@ int  main (void)
     int y = get_int("y: ");
     // printf("%i\n", addition(x,y));
 
-    // (Type casting) treating one type as an another type
+    // (TYPE CASTING) treating one type as an another type
+    // If we dont use TYPE CASTING then the TRUNCATION happens(Truncation is a process or operation that shortens or cuts off a piece of data,
+    // such as a string or a file, by removing characters, digits, or bytes from the end.)
     float z = (float) x / (float) y;
     printf("%f\n", z);
 }
