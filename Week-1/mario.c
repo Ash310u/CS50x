@@ -13,8 +13,10 @@ int main(void)
     while (n < 1);
 
     // Print an n-by-n grid of bricks
+    // first loop will print Vertical
     for (int i = 0; i < n; i++)
     {
+        // second loop will print Horizontal
         for (int j = n; j >= i; j--)
         {
             if (i >= j)
