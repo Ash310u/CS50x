@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
+void print_row (int length, int space_length);
 int main (void)
 {
     // Promt User for positive integer
@@ -14,13 +15,16 @@ int main (void)
     // Print an n-by-n grid of bricks
     for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j <= i + 1; j++)
-        {
-            printf(" ");
-            if(j < i) {
-                printf("#");
-            }
-        }
+        print_row(i, n-1);
         printf("\n");
     }
+}
+
+void print_row (int length, int space_length)
+{
+    for(int i = 0; i < length; i++)
+        {
+            printf(" ");
+            printf("#");
+        }
 }
