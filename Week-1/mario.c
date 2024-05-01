@@ -17,31 +17,17 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         // second loop will print Horizontal
-        for (int j = 0; j <= n-i-1; j++)
+        for (int j = n; j >= i; j--)
         {
+            if( i > j )
+            {
+                printf(" ");
+            }
+            if (i <= j) {
                 printf("* ");
-            // if (i <= j) {
-            // }
-            // if (i > j ) {
-                // printf(" ");
-            // }
+            }
         }
 
         printf("\n");
     }
 }
-
-// void print_row(int length, int space_length)
-// {
-//     for (int j = length; j >= space_length; j--)
-//     {
-//         if (space_length >= j)
-//         {
-//             printf("*");
-//         }
-//         if (space_length != j)
-//         {
-//             printf("_");
-//         }
-//     }
-// }
