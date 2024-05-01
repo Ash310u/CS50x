@@ -17,7 +17,7 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         // second loop will print Horizontal
-        for (int j = n; j >= i ; j--)
+        for (int j = n; j >= i  ; j--)
         {
             if (j <= i)
             {
