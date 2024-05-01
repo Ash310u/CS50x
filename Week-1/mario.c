@@ -15,16 +15,21 @@ int main (void)
     // Print an n-by-n grid of bricks
     for(int i = 0; i < n; i++)
     {
-        print_row(i, n-1);
+        print_row(n, i);
         printf("\n");
     }
 }
 
 void print_row (int length, int space_length)
 {
-    for(int i = 0; i < length; i++)
+    for(int j = length; j >= space_length; j--)
         {
-            printf(" ");
-            printf("#");
+            if(space_length >= j)
+            {
+                printf("#");
+            } else
+            {
+                printf(" ");
+            }
         }
 }
