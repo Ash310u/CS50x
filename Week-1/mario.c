@@ -19,7 +19,7 @@ int main(void)
         // second loop will print Horizontal
         for (int j = n; j >= i; j--)
         {
-            if (i >= j)
+            if (j <= i)
             {
                 printf("#");
             } else
