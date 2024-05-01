@@ -13,6 +13,4 @@ int main(void)
     {
         printf("Not agreed.\n");
     }
-    char d = 65;
-    pritnf("%i", d)
 }
