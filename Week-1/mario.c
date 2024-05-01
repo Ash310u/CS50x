@@ -24,7 +24,7 @@ int main(void)
                 printf("#");
             } else
             {
-                printf("0");
+                printf(" ");
             }
         }
 
