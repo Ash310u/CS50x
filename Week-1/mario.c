@@ -17,12 +17,13 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         // second loop will print Horizontal
-        for (int j = n; j >= i  ; j--)
+        for (int j = n; j >= i - 1; j--)
         {
+            if (i >= j) {
+                printf("* ");
+            }
+            if (i < j ) {
                 printf(" ");
-            if (j <= i)
-            {
-                printf("#");
             }
         }
 
@@ -36,7 +37,7 @@ int main(void)
 //     {
 //         if (space_length >= j)
 //         {
-//             printf("#");
+//             printf("*");
 //         }
 //         if (space_length != j)
 //         {
