@@ -14,10 +14,10 @@ int main(void)
 
     // Print an n-by-n grid of bricks
     // first loop will print Vertical
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         // second loop will print Horizontal
-        for (int j = 1; j <= n - i; j++)
+        for (int j = 0; j <= n-i-1; j++)
         {
                 printf("* ");
             // if (i <= j) {
