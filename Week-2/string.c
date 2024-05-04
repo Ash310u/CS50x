@@ -5,10 +5,11 @@
 int main (void)
 {
     string s = get_string("Input:  ");
-    int length = strlen(s);
 
     printf("Output: ");
-    for (int i = 0; i < length; i++)
+    // Here I'm calling the 'strlen' function(which is also using a loop for finding the string's length) in the 'initialization part' of my for loop,
+    // So that the strlen function is not get calling again and again...
+    for (int i = 0, length = strlen(s); i < length; i++)
     {
         printf("%c", s[i]);
     }
