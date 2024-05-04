@@ -5,10 +5,12 @@ int string_length (string s)
 int main (void)
 {
     string name = get_string("Name: ");
-    printf("Length: %i\n", string_length(name));
+    int length = string_length(name);
+
+    printf("Length: %i\n", length);
 }
 
-int string_length (string s)
+int string_length(string s)
 {
     int n = 0;
     while (s[n] != '\0')
