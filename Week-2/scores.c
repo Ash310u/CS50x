@@ -10,9 +10,7 @@ int main (void)
     int sum = 0;
     for(int i = 0; i < N; i++)
     {
-        int value = get_int("Score %i: ", i + 1);
-        scores[i] = value;
-        sum += value;
+        sum += scores[i] = get_int("Score %i: ", i + 1);
     }
 
     // If I involve only one decimal point in denominator it will promote the whole arithmetic expression to being floating point.
