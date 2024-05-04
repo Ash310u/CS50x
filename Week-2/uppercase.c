@@ -10,7 +10,8 @@ int main (void)
     {
         if(s[i] >= 'a' && s[i] <= 'z')
         {
-            printf("%c", s[i] - 32);
+            // printf("%c", s[i] - 32);
+            printf("%c", s[i] - ('a' - 'A'));
         } else
         {
             printf("%c", s[i]);
