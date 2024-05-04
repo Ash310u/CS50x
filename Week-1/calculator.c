@@ -16,13 +16,13 @@ int  main (void)
     // such as a string or a file, by removing characters, digits, or bytes from the end //////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////
 
-    // float z = (float) x / (float) y;
-    // // "%.5f" it means show me 5 decimal places
-    // printf("%.20f\n", z);
-
-    double z = (double) x / (double) y;
-    // "%.5f" this format specifiers will work for "Double" also
+    float z = (float) x / (float) y;
+    // "%.5f" it means show me 5 decimal places
     printf("%.20f\n", z);
+
+    // double z = (double) x / (double) y;
+    // // "%.5f" this format specifiers will work for "Double" also
+    // printf("%.20f\n", z);
 }
 
 // int addition (int a, int b)
