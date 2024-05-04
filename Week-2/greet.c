@@ -3,5 +3,12 @@
 
 int main (int argc, string argv[])
 {
-    printf("you ran a programme called '%s'\n", argv[0]);
+    if(argc == 2)
+    {
+        printf("hello %s\n ", argv[1]);
+    } else
+        printf("hello world\n");
+    {
+
+    }
 }
