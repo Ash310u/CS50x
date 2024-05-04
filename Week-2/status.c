@@ -5,8 +5,8 @@ int main (int argc, string argv[])
 {
     for(int i = 0; i < argc; i++)
     {
-        if(argc == 1) {
-            printf("hello world");
+        if(argc != 2) {
+            printf("Missing command-line argument ");
         }
 
         if(i > 0)
