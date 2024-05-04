@@ -17,5 +17,6 @@ int main (void)
     }
 
     // If I involve only one decimal point in denominator it will promote the whole arithmetic expression to being floating point.
-    printf("Average: %f\n", sum / (n / 1.0));
+                          // Oooohw I forgot that i can cast as floating point
+    printf("Average: %f\n", sum / (float) n );
 }
