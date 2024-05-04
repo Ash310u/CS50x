@@ -5,13 +5,17 @@ int main (void)
 
 {
     int n = get_int("Scores Types: ");
-                   // jsut trying things.
-    int score[3]; // = [3, 5, 6]
+
+    int scores[n];
+
+    int sum = 0;
     for(int i = 0; i < n; i++)
     {
-        score[i] = get_int("Score %i: ", i + 1);
+        int value = get_int("Score %i: ", i + 1);
+        scores[i] = value;
+        sum += value;
     }
 
     // If I involve only one decimal point in denominator it will promote the whole arithmetic expression to being floating point.
-    printf("Average: %f\n", (score[0] + score[1] + score[2]) / 3.0);
+    printf("Average: %f\n", sum / (n / 1.0));
 }
