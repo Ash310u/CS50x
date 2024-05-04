@@ -3,5 +3,5 @@
 
 int main (int argc, string argv[])
 {
-    printf("hello, %s\n", argv[1]);
+    printf("you ran a programme called '%s'\n", argv[0]);
 }
