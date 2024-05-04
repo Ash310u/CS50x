@@ -4,8 +4,7 @@
 int main (void)
 
 {
-    int n = get_int("Scores Types: ");
-
+    const int N = 3;
     int scores[n];
 
     int sum = 0;
