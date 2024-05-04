@@ -2,10 +2,11 @@
 
 int main (void)
 {
-    int score1 = 243;
-    int score2 = 533;
-    int score3 = 342;
+    int score[3] = [3, 5, 6]
+    // score[0] = 457;
+    // score[1] = 245;
+    // score[2] = 532;
 
     // If I involve only one decimal point in denominator it will promote the whole arithmetic expression to being floating point.
-    printf("Average: %f\n", (score1 + score2 + score3) / 3.0);
+    printf("Average: %f\n", (score[0] + score[1] + score[2]) / 3.0);
 }
