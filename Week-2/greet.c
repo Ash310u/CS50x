@@ -3,15 +3,15 @@
 
 int main (int argc, string argv[])
 {
-    printf("hello ");
     for(int i = 0; i < argc; i++)
     {
-        if(argc >= 1 && argv[0] == 0)
+        if(argc == 1) {
+            printf("hello world");
+        }
+
+        if(i > 0)
         {
             printf("%s ", argv[i]);
-        } else
-        {
-            printf("world\n");
         }
     }
     printf("\n");
