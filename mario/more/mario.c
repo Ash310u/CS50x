@@ -12,14 +12,14 @@ int main(void)
     {
         n = get_int("Size: ");
     }
-    while (n < 0);
+    while (n < 1);
 
     // Print an n-by-n grid of bricks
     // first loop will print Vertical
     for (int i = 1; i <= n; i++)
     {
         print_left(n,i);
-        printf("  ");
+        printf(" ");
         print_right(n,i);
         printf("\n");
     }
