@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void print_row(int length, int space_length);
+void print_left(int length, int space_length);
+void print_right(int length, int space_length);
 int main(void)
 {
     // Promt User for positive integer
@@ -16,15 +17,32 @@ int main(void)
     // first loop will print Vertical
     for (int i = 0; i <= n; i++)
     {
-        print_row(n,i);
+        print_right(n,i);
         printf("\n");
+        print_left(n,i);
     }
 }
 
-void print_row(int length, int space_length)
+void print_left(int length, int space_length)
 {
     // second loop will print Horizontal
     for (int j = length; j >= 1; j--)
+    {
+        if (space_length >= j)
+        {
+            printf("*");
+        }
+        else
+        {
+            printf(" ");
+        }
+    }
+}
+
+void print_right(int length, int space_length)
+{
+    // second loop will print Horizontal
+    for (int j = 0; j <= length ; j++)
     {
         if (space_length >= j)
         {
