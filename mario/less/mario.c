@@ -35,5 +35,4 @@ void print_row(int length, int space_length)
             printf(" ");
         }
     }
-
 }
