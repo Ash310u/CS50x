@@ -18,9 +18,9 @@ int main(void)
     // first loop will print Vertical
     for (int i = 1; i <= n; i++)
     {
-        print_left(n,i);
+        print_left(n, i);
         printf("  ");
-        print_right(n,i);
+        print_right(n, i);
         printf("\n");
     }
 }
