@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 void print_left(int length, int space_length);
-// void print_right(int length, int space_length);
+void print_right(int length, int space_length);
+void print_spaced_row(int length, int space_length);
 int main(void)
 {
     // Promt User for positive integer
@@ -17,8 +18,10 @@ int main(void)
     // first loop will print Vertical
     for (int i = 0; i <= n; i++)
     {
-        print_left(n,i);
+        // print_left(n,i);
+        // printf("    ");
         // print_right(n,i);
+        print_spaced_row(n,i);
         printf("\n");
     }
 }
@@ -32,16 +35,17 @@ void print_left(int length, int space_length)
         {
             printf("*");
         }
-        if (space_length >= j)
-        {
-            printf("*");
-        }
         else
         {
             printf(" ");
         }
     }
 
+}
+
+void print_right(int length, int space_length)
+{
+    // second loop will print Horizontal
     for (int j = 1; j <= length ; j++)
     {
         if (space_length >= j)
@@ -55,18 +59,18 @@ void print_left(int length, int space_length)
     }
 }
 
-// void print_right(int length, int space_length)
-// {
-//     // second loop will print Horizontal
-//     for (int j = 1; j <= length ; j++)
-//     {
-//         if (space_length >= j)
-//         {
-//             printf("*");
-//         }
-//         else
-//         {
-//             printf(" ");
-//         }
-//     }
-// }
+void print_spaced_row(int length, int space_length)
+{
+    // second loop will print Horizontal
+    for (int j = 0; j >= space_length - length ; j--)
+    {
+        if (space_length >= j)
+        {
+            printf("*");
+        }
+        else
+        {
+            printf(" ");
+        }
+    }
+}
