@@ -12,7 +12,7 @@ int main(void)
     {
         n = get_int("Size: ");
     }
-    while (n < 1);
+    while (n < 0);
 
     // Print an n-by-n grid of bricks
     // first loop will print Vertical
