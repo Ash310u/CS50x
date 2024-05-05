@@ -64,13 +64,13 @@ void print_spaced_row(int length, int space_length)
     // second loop will print Horizontal
     for (int j = 0; j <= length - space_length ; j++)
     {
-        if (space_length <= j)
+        if (length - space_length == j)
         {
             printf("*");
         }
         else
         {
-            printf(" ");
+            printf(".");
         }
     }
 }
