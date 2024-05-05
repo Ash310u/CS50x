@@ -19,7 +19,7 @@ int main(void)
     for (int i = 0; i <= n; i++)
     {
         print_left(n,i);
-        printf("    ");
+        printf("  ");
         print_right(n,i);
         printf("\n");
     }
