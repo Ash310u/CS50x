@@ -32,7 +32,7 @@ void print_left(int length, int space_length)
     {
         if (space_length >= j)
         {
-            printf("*");
+            printf("#");
         }
         else
         {
@@ -49,7 +49,7 @@ void print_right(int length, int space_length)
     {
         if (space_length >= j)
         {
-            printf("*");
+            printf("#");
         }
         else
         {
@@ -66,7 +66,7 @@ void print_right(int length, int space_length)
 //     {
 //         if (length - space_length <= j)
 //         {
-//             printf("*");
+//             printf("#");
 //         }
 //         else
 //         {
