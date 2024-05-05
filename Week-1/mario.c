@@ -14,7 +14,7 @@ int main(void)
 
     // Print an n-by-n grid of bricks
     // first loop will print Vertical
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         print_row(n,i);
         printf("\n");
