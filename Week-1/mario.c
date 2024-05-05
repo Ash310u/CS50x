@@ -62,9 +62,9 @@ void print_right(int length, int space_length)
 void print_spaced_row(int length, int space_length)
 {
     // second loop will print Horizontal
-    for (int j = length; j >= space_length; j--)
+    for (int j = 1; j <= length; j++)
     {
-        if (space_length >= j)
+        if (space_length <= length)
         {
             printf("*");
         }
