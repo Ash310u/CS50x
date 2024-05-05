@@ -62,7 +62,7 @@ void print_right(int length, int space_length)
 void print_spaced_row(int length, int space_length)
 {
     // second loop will print Horizontal
-    for (int j = 0; j <= length - space_length ; j++)
+    for (int j = 0; j <= length ; j++)
     {
         if (length - space_length <= j)
         {
