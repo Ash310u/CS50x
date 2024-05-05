@@ -19,7 +19,7 @@ int main(void)
     for (int i = 1; i <= n; i++)
     {
         print_left(n,i);
-        printf(" ");
+        printf("  ");
         print_right(n,i);
         printf("\n");
     }
@@ -50,10 +50,6 @@ void print_right(int length, int space_length)
         if (space_length >= j)
         {
             printf("#");
-        }
-        else
-        {
-            printf(" ");
         }
     }
 }
