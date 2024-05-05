@@ -7,12 +7,12 @@ void print_spaced_row(int length, int space_length);
 int main(void)
 {
     // Promt User for positive integer
-    int n;
-    do
-    {
-        n = get_int("Size: ");
-    }
-    while (n < 1);
+    int n = 5;
+    // do
+    // {
+    //     n = get_int("Size: ");
+    // }
+    // while (n < 1);
 
     // Print an n-by-n grid of bricks
     // first loop will print Vertical
@@ -64,7 +64,7 @@ void print_spaced_row(int length, int space_length)
     // second loop will print Horizontal
     for (int j = 0; j <= length - space_length ; j++)
     {
-        if (length - space_length == j)
+        if (length - space_length <= j)
         {
             printf("*");
         }
