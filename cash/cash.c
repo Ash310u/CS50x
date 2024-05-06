@@ -8,14 +8,15 @@ int main(void)
         n = get_int("Change Owed: ");
     } while (n > 0);
 
-    int coins;
+    int coins = 0;
     do {
         if(n > 25) {
+            n = n - 25;
             coins ++;
         }
         // else if(n > 25) {
             // coins ++;
         // }
-    } while ()
-
+    } while (n == 0);
+    printf("%i\n", coins);
 }
