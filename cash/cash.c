@@ -17,7 +17,7 @@ int main(void)
         // else if(n > 25) {
             // coins ++;
         // }
-    } while (n != 0);
+    } while (n < 1);
 
     printf("%i\n", n -= 25);
     printf("%i\n", coins);
