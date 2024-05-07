@@ -21,6 +21,14 @@ int main(void)
     }
 
     org_n = n / 10;
+
+    while (org_n > 0)
+    {
+        int lastDigit = org_n % 10;
+        int multi = lastDigit * 2;
+        sum += multi;
+        org_n = org_n / 100;
+    }
     // int num_digit = 0;
 
     // while (n > 0)
