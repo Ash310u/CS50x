@@ -10,15 +10,17 @@ int main(void)
     }
     while (n <= 0);
 
+    long org_n = n;
+
     int sum = 0;
-    while (n > 0)
+    while (org_n > 0)
     {
         int lastDigit = n % 10;
         sum += lastDigit;
-        n = n / 100;
+        org_n = org_n / 100;
     }
 
-    // long org_n = n;
+    org_n = n / 10;
     // int num_digit = 0;
 
     // while (n > 0)
