@@ -20,12 +20,12 @@ int main(void)
     }
     n = org_n;
 
-    printf("%i\n", num_digit);
+    printf("Length: %i\n", num_digit);
 
     int arr[num_digit];
-    for (int i = num_digit; i > 0; i--) {
+    for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
+        printf("%i\n", arr[i]);
         n = n / 10;
     }
-    printf("%i\n", arr[0]);
 }
