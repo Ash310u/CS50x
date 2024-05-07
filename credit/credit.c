@@ -47,10 +47,10 @@ int main(void)
 
     if(sub_total % 10 == 0)
     {
-        printf("VISA: \n");
+        printf("VISA: %i\n", sub_total);
     }
     else
     {
-        printf("INVALID \n");
+        printf("INVALID %i\n", sub_total);
     }
 }
