@@ -25,27 +25,20 @@ int main(void)
     for (int i = num_digit - 1; i >= 0; i--)
     {
         arr[i] = n % 10;
-        if (i % 2 == 0)
+        int digit = arr[i] * 2;
+        if (digit > 9)
         {
-            int digit = arr[i] * 2;
-            if (digit > 9)
+            while (digit > 0)
             {
-                while (digit > 0)
-                {
-                    sub_total += digit % 10;
-                    digit = digit / 10;
-                }
-            }
-            else
-            {
-                sub_total += digit;
+                sub_total += digit % 10;
+                digit = digit / 10;
             }
         }
         else
         {
-            sub_total += arr[i];
+            sub_total += digit;
         }
-        n = n / 10;
+        n = n / 100;
     }
 
     if (sub_total % 10 == 0)
