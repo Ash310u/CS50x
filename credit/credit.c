@@ -37,13 +37,13 @@ int main(void)
                 {
                     sub_total += digit % 10;
                     digit = digit / 10;
-                // printf("Digit: %i\n", digit);
                 }
             }
             else
             {
                 sub_total += digit;
             }
+                printf("Digit with else : %i\n", digit);
             // printf("Digit: %i\n", digit);
         }
         n = n / 10;
