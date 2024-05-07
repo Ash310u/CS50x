@@ -29,15 +29,18 @@ int main(void)
         if (i % 2 != 0)
         {
             int digit = arr[i] * 2;
-            int add_big_digit= ;
             if(digit > 9)
             {
-                add_big_digit += digit % 10;
+                sub_total += digit % 10;
                 digit = digit / 10;
             }
-            sub_total += add_big_digit;
+            else
+            {
+                sub_total += digit;
+            }
         }
         n = n / 10;
     }
+    printf("%i\n", sub_total);
 
 }
