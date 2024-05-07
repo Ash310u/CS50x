@@ -10,6 +10,18 @@ int main(void)
     }
     while (n <= 0);
 
+    long org_n = n;
+    int num_digit;
+
+    while (n > 0)
+    {
+        number = number / 10;
+        num_digit++
+    }
+    n = org_n;
+
+
+
     int arr[16];
     int arrlen = 0;
     while (n > 0) {
