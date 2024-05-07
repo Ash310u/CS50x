@@ -11,9 +11,10 @@ int main(void)
     while (n <= 0);
 
     int arr[16];
-    for (int i = 0; i < 15; i++) {
-        arr[i] = n % 10;
-        printf("%i\n", arr[i]);
+    int arrlen = 0;
+    while (n > 0) {
+        arr[arrlen + 1] = n % 10;
+        printf("%i\n", arr[0]);
         n = n / 10;
     }
 
