@@ -20,40 +20,54 @@ int main(void)
     }
     n = org_n;
 
+    int arr[num_digit];
     int sub_total = 0;
-    for (int i = num_digit - 1; i >= 0; i--) {
+    for (int i = num_digit - 1; i >= 0; i--)
+    {
+        arr[i] = n % 10;
         if (i % 2 == 0)
         {
-            int digit = (n % 10) * 2;
-            if(digit > 9)
+            int digit = arr[i] * 2;
+            if (digit > 9)
             {
                 while (digit > 0)
                 {
                     sub_total += digit % 10;
                     digit = digit / 10;
                 }
-                printf("if: %i\n", digit);
             }
             else
             {
                 sub_total += digit;
-                printf("else: %i\n", digit);
             }
         }
         else
         {
-            sub_total += (n % 10);
+            sub_total += arr[i];
         }
         n = n / 10;
     }
 
-    if(sub_total % 10 == 0)
+    if (sub_total % 10 == 0)
     {
-        if(num_digit == 15)
-        printf("VISA: %i\n", sub_total);
+        if (num_digit == 15 && arr[15] == 3)
+        {
+            if (arr[14] == 4 || arr[14] == 7)
+            {
+                printf("AMEX\n");
+            }
+        }
+        else if (num_digit == 16 && arr[16] == 5)
+        {
+            if (arr[15] == 1 || arr[15] == 2 || arr[15] == 3 || arr[15] == 4 || arr[15] == 5)
+            {
+                printf("MASTERCARD\n");
+            }
+        }
+        printf("VISA\n");
     }
     else
     {
-        printf("INVALID %i\n", sub_total);
+        printf("INVALID \n");
     }
 }
