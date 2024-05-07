@@ -26,26 +26,23 @@ int main(void)
     int sub_total = 0;
     for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
-        // printf("arr[%i]: %i\n", i ,arr[i]);
         if (i % 2 == 0)
         {
             int digit = arr[i] * 2;
-            printf("-----------------------%i\n", arr[i]);
             if(digit > 9)
             {
-                printf("Digit with condition: %i\n", digit);
-                // while (digit > 0)
-                // {
+                while (digit > 0)
+                {
                     sub_total += digit % 10;
                     digit = digit / 10;
-                // }
+                }
             }
             else
             {
                 sub_total += digit;
-                printf("Digit: %i\n", digit);
             }
         }
+        sub_total += arr[i];
         n = n / 10;
     }
     printf("Sub Total: %i\n", sub_total);
