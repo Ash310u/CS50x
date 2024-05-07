@@ -10,10 +10,10 @@ int main(void)
     }
     while (n <= 0);
 
-    // int arr[16];
-    // for (int i = 0; i < 16; i++) {
-    //     arr[i] =
-    // }
+    int arr[16];
+    for (int i = 16; i > 0; i--) {
+        arr[i] = n % 10;
+    }
 
-        printf("%li\n", n[]);
+        printf("%i\n", arr);
 }
