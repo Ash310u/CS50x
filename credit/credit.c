@@ -37,6 +37,7 @@ int main(void)
                 {
                     sub_total += digit % 10;
                     digit = digit / 10;
+                // printf("Digit: %i\n", digit);
                 }
             }
             else
