@@ -1,13 +1,19 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
     long n;
-    do{
+    do
+    {
         n = get_long("Number: ");
     }
-    while (n == 0);
+    while ();
 
-    printf("%li\n", n);
+    int arr;
+    for (int i = 0; i < ; i++) {
+
+    }
+
+        printf("%li\n", n);
 }
