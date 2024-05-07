@@ -26,6 +26,7 @@ int main(void)
     int sub_total = 0;
     for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
+        printf("arr[%i]: %i\n", i ,arr[i]);
         if (i % 2 != 0)
         {
             int digit = arr[i] * 2;
@@ -37,6 +38,7 @@ int main(void)
             else
             {
                 sub_total += digit;
+                printf("%i\n", digit);
             }
         }
         n = n / 10;
