@@ -32,20 +32,6 @@ int main(void)
 
     if (sum % 10 == 0)
     {
-        if (num_digit == 15 && arr[15] == 3)
-        {
-            if (arr[14] == 4 || arr[14] == 7)
-            {
-                printf("AMEX\n");
-            }
-        }
-        else if (num_digit == 16 && arr[16] == 5)
-        {
-            if (arr[15] == 1 || arr[15] == 2 || arr[15] == 3 || arr[15] == 4 || arr[15] == 5)
-            {
-                printf("MASTERCARD\n");
-            }
-        }
         printf("VISA\n");
     }
     else
