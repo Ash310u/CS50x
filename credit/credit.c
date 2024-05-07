@@ -27,7 +27,7 @@ int main(void)
     for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
         // printf("arr[%i]: %i\n", i ,arr[i]);
-        if (i == 0 || i % 2 != 0)
+        if (i+1 % 2 != 0)
         {
             int digit = arr[i] * 2;
             if(digit > 9)
