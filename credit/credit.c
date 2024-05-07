@@ -25,7 +25,7 @@ int main(void)
     for (int i = num_digit - 1; i >= 0; i--)
     {
         arr[i] = n % 10;
-        if (i % 2 == 0)
+        if (i % 2 != 0)
         {
             int digit = arr[i] * 2;
             if (digit > 9)
