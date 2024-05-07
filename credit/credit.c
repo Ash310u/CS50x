@@ -30,7 +30,7 @@ int main(void)
         if (i % 2 != 0)
         {
             int digit = arr[i] * 2;
-            printf("check digit: %i\n", digit);
+            printf("-----------------------%i\n", arr[i]);
             if(digit > 9)
             {
                 printf("Digit with condition: %i\n", digit);
