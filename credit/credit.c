@@ -30,6 +30,7 @@ int main(void)
         if (i+1 % 2 != 0)
         {
             int digit = arr[i] * 2;
+            printf("check digit: %i\n", digit);
             if(digit > 9)
             {
                 printf("Digit with condition: %i\n", digit);
@@ -42,9 +43,8 @@ int main(void)
             else
             {
                 sub_total += digit;
+                printf("Digit: %i\n", digit);
             }
-                printf("Digit with else : %i\n", digit);
-            // printf("Digit: %i\n", digit);
         }
         n = n / 10;
     }
