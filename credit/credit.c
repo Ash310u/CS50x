@@ -20,15 +20,11 @@ int main(void)
     }
     n = org_n;
 
-    // printf("Length: %i\n", num_digit);
-
-    int arr[num_digit];
     int sub_total = 0;
     for (int i = num_digit - 1; i >= 0; i--) {
-        arr[i] = n % 10;
         if (i % 2 == 0)
         {
-            int digit = arr[i] * 2;
+            int digit = (n % 10) * 2;
             if(digit > 9)
             {
                 while (digit > 0)
@@ -42,8 +38,19 @@ int main(void)
                 sub_total += digit;
             }
         }
-        sub_total += arr[i];
+        else
+        {
+            sub_total += (n % 10);
+        }
         n = n / 10;
     }
-    printf("Sub Total: %i\n", sub_total);
+
+    if(sub_total % 10 == 0)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID \n");
+    }
 }
