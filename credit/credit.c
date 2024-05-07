@@ -15,7 +15,7 @@ int main(void)
     int sum = 0;
     while (org_n > 0)
     {
-        int lastDigit = n % 10;
+        int lastDigit = org_n % 10;
         sum += lastDigit;
         org_n = org_n / 100;
     }
