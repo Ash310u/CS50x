@@ -47,7 +47,7 @@ int main(void)
 
     if(sub_total % 10 == 0)
     {
-        printf("VISA\n");
+        printf("VISA: \n");
     }
     else
     {
