@@ -34,11 +34,11 @@ int main(void)
             if(digit > 9)
             {
                 printf("Digit with condition: %i\n", digit);
-                while (digit > 0)
-                {
+                // while (digit > 0)
+                // {
                     sub_total += digit % 10;
                     digit = digit / 10;
-                }
+                // }
             }
             else
             {
