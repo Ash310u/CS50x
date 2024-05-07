@@ -13,7 +13,8 @@ int main(void)
     int arr[16];
     for (int i = 15; i >= 0; i--) {
         arr[i] = n % 10;
-        printf("%i\n", arr[1]);
+        printf("%i\n", arr[i]);
+        n = n / 10;
     }
 
 }
