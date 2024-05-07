@@ -38,7 +38,7 @@ int main(void)
         {
             sub_total += digit;
         }
-        n = n / 100;
+        n = n / 10;
     }
 
     if (sub_total % 10 == 0)
