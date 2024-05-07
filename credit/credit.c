@@ -6,6 +6,7 @@ int main (void)
     long n;
     do{
         n = get_long("Number: ");
-    } while (n[0] != 0)
+    } while (n == 0)
+
     printf("%li\n", n);
 }
