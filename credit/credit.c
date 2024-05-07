@@ -25,7 +25,16 @@ int main(void)
     int arr[num_digit];
     for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
-        printf("%i\n", arr[i]);
+        if (i % 2 != 0)
+        {
+            int digit = arr[i] * 2;
+            int mini_digit;
+            if(digit > 9)
+            {
+                mini_digit = 
+            }
+        }
         n = n / 10;
     }
+
 }
