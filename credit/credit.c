@@ -32,6 +32,7 @@ int main(void)
             int digit = arr[i] * 2;
             if(digit > 9)
             {
+                printf("Digit with condition: %i\n", digit);
                 while (digit > 0)
                 {
                     sub_total += digit % 10;
@@ -42,10 +43,10 @@ int main(void)
             {
                 sub_total += digit;
             }
-            printf("Digit: %i\n", digit);
+            // printf("Digit: %i\n", digit);
         }
         n = n / 10;
     }
-    printf("Sub Total: %i\n", sub_total);
+    // printf("Sub Total: %i\n", sub_total);
 
 }
