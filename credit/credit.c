@@ -32,10 +32,12 @@ int main(void)
                     sub_total += digit % 10;
                     digit = digit / 10;
                 }
+                printf("if: %i\n", digit);
             }
             else
             {
                 sub_total += digit;
+                printf("else: %i\n", digit);
             }
         }
         else
