@@ -23,16 +23,19 @@ int main(void)
     printf("Length: %i\n", num_digit);
 
     int arr[num_digit];
+    int sub_total = 0;
     for (int i = num_digit - 1; i >= 0; i--) {
         arr[i] = n % 10;
         if (i % 2 != 0)
         {
             int digit = arr[i] * 2;
-            int mini_digit;
+            int add_big_digit= ;
             if(digit > 9)
             {
-                mini_digit = 
+                add_big_digit += digit % 10;
+                digit = digit / 10;
             }
+            sub_total += add_big_digit;
         }
         n = n / 10;
     }
