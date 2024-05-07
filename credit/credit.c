@@ -8,12 +8,12 @@ int main(void)
     {
         n = get_long("Number: ");
     }
-    while ();
+    while (n <= 0);
 
-    int arr;
-    for (int i = 0; i < ; i++) {
+    // int arr[16];
+    // for (int i = 0; i < 16; i++) {
+    //     arr[i] =
+    // }
 
-    }
-
-        printf("%li\n", n);
+        printf("%li\n", n[]);
 }
