@@ -26,7 +26,7 @@ int main(void)
     {
         int lastDigit = org_n % 10;
         int multi = lastDigit * 2;
-        sum += (multi % 10) + (nulti / 10);
+        sum += (multi % 10) + (multi / 10);
         org_n = org_n / 100;
     }
     // int num_digit = 0;
