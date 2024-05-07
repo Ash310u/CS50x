@@ -49,6 +49,7 @@ int main(void)
 
     if(sub_total % 10 == 0)
     {
+        if(num_digit == 15)
         printf("VISA: %i\n", sub_total);
     }
     else
