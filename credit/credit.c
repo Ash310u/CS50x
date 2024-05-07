@@ -11,23 +11,21 @@ int main(void)
     while (n <= 0);
 
     long org_n = n;
-    int num_digit;
+    int num_digit = 0;
 
     while (n > 0)
     {
-        number = number / 10;
-        num_digit++
+        n = n / 10;
+        num_digit++;
     }
     n = org_n;
 
+    printf("%i\n", num_digit);
 
-
-    int arr[16];
-    int arrlen = 0;
-    while (n > 0) {
-        arr[arrlen + 1] = n % 10;
-        printf("%i\n", arr[0]);
+    int arr[num_digit];
+    for (int i = num_digit; i > 0; i--) {
+        arr[i] = n % 10;
         n = n / 10;
     }
-
+    printf("%i\n", arr[0]);
 }
