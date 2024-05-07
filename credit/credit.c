@@ -11,9 +11,9 @@ int main(void)
     while (n <= 0);
 
     int arr[16];
-    for (int i = 16; i >= 0; i--) {
+    for (int i = 15; i >= 0; i--) {
         arr[i] = n % 10;
+        printf("%i\n", arr[1]);
     }
 
-        printf("%i\n", arr[0]);
 }
