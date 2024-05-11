@@ -32,22 +32,20 @@ int main(void)
     }
 
     org_n = n;
-    while(org_n >= 0)
+    while(org_n != 0)
     {
         org_n = org_n / 10;
         count++;
-        printf("%i\n", count);
     }
-    printf("%i\n", count);
 
     if (sum % 10 == 0)
     {
         printf("VISA\n");
     }
-    // if ()
-    // {
+    if (count = 15)
+    {
 
-    // }
+    }
     else
     {
         printf("INVALID \n");
