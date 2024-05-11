@@ -63,10 +63,10 @@ int main(void)
         {
             printf("VISA\n");
         }
-        printf("INVALID \n");
+        printf("INVALID\n");
     }
     else
     {
-        printf("INVALID \n");
+        printf("INVALID\n");
     }
 }
