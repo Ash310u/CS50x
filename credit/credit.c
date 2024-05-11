@@ -39,29 +39,25 @@ int main(void)
         count++;
     }
 
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < count - 2; i++)
     {
         divisor = divisor * 10;
     }
 
-    int firstDigit = n / 10;
+    int firstDigit = n / divisor;
     int secondDigit = n / (divisor / 10);
 
-        printf("count: %i\n", count);
-        printf("divisor: %li\n", divisor);
-        printf("%i\n", firstDigit);
-        printf("%i\n", secondDigit);
     if (sum % 10 == 0)
     {
-        if (firstDigit == 3 && (secondDigit == 4 ||  secondDigit == 7 ))
+        if (count == 15 && firstDigit == 3 && (secondDigit == 4 ||  secondDigit == 7 ))
         {
             printf("AMEX\n");
         }
-        if (firstDigit == 5 && (secondDigit == 1 ||  secondDigit == 2 || secondDigit == 3 ||  secondDigit == 4 ||  secondDigit == 5))
+        if (count == 16 && firstDigit == 5 && (secondDigit == 1 ||  secondDigit == 2 || secondDigit == 3 ||  secondDigit == 4 ||  secondDigit == 5))
         {
             printf("MASTERCARD\n");
         }
-        if (firstDigit == 4)
+        if ((count == 13 || count == 16) && firstDigit == 4)
         {
             printf("VISA\n");
         }
