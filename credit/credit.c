@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    long n ;
+    long n;
     do
     {
         n = get_long("Number: ");
@@ -53,13 +53,18 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else if (count == 16 &&(secondDigit == 51 || secondDigit == 52 || secondDigit == 53 || secondDigit == 54 || secondDigit == 55))
+        else if (count == 16 && (secondDigit == 51 || secondDigit == 52 || secondDigit == 53 ||
+                                 secondDigit == 54 || secondDigit == 55))
         {
             printf("MASTERCARD\n");
         }
         else if ((count == 13 || count == 16) && firstDigit == 4)
         {
             printf("VISA\n");
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
     else
