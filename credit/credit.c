@@ -3,12 +3,12 @@
 
 int main(void)
 {
-    long n = 5105105105105100;
-    // do
-    // {
-    //     n = get_long("Number: ");
-    // }
-    // while (n <= 0);
+    long n ;
+    do
+    {
+        n = get_long("Number: ");
+    }
+    while (n <= 0);
 
     long org_n = n;
     int count = 0;
@@ -49,13 +49,11 @@ int main(void)
 
     if (sum % 10 == 0)
     {
-        if (count == 15 && firstDigit == 3 && (secondDigit == 4 || secondDigit == 7))
+        if (count == 15 && (secondDigit == 34 || secondDigit == 37))
         {
             printf("AMEX\n");
         }
-        else if (count == 16 && firstDigit == 5 &&
-                 (secondDigit == 1 || secondDigit == 2 || secondDigit == 3 || secondDigit == 4 ||
-                  secondDigit == 5))
+        else if (count == 16 &&(secondDigit == 51 || secondDigit == 52 || secondDigit == 53 || secondDigit == 54 || secondDigit == 55))
         {
             printf("MASTERCARD\n");
         }
@@ -63,7 +61,6 @@ int main(void)
         {
             printf("VISA\n");
         }
-        printf("INVALID\n");
     }
     else
     {
