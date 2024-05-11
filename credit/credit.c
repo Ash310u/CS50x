@@ -49,18 +49,21 @@ int main(void)
 
     if (sum % 10 == 0)
     {
-        if (count == 15 && firstDigit == 3 && (secondDigit == 4 ||  secondDigit == 7 ))
+        if (count == 15 && firstDigit == 3 && (secondDigit == 4 || secondDigit == 7))
         {
             printf("AMEX\n");
         }
-        if (count == 16 && firstDigit == 5 && (secondDigit == 1 ||  secondDigit == 2 || secondDigit == 3 ||  secondDigit == 4 ||  secondDigit == 5))
+        else if (count == 16 && firstDigit == 5 &&
+                 (secondDigit == 1 || secondDigit == 2 || secondDigit == 3 || secondDigit == 4 ||
+                  secondDigit == 5))
         {
             printf("MASTERCARD\n");
         }
-        if ((count == 13 || count == 16) && firstDigit == 4)
+        else if ((count == 13 || count == 16) && firstDigit == 4)
         {
             printf("VISA\n");
         }
+        printf("INVALID \n");
     }
     else
     {
