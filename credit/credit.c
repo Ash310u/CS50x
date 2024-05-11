@@ -3,12 +3,12 @@
 
 int main(void)
 {
-    long n;
-    do
-    {
-        n = get_long("Number: ");
-    }
-    while (n <= 0);
+    long n = 5105105105105100;
+    // do
+    // {
+    //     n = get_long("Number: ");
+    // }
+    // while (n <= 0);
 
     long org_n = n;
     int count = 0;
