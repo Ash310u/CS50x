@@ -44,9 +44,13 @@ int main(void)
         divisor = divisor * 10;
     }
 
-    int firstDigit = n / divisor;
+    int firstDigit = n / 10;
     int secondDigit = n / (divisor / 10);
 
+        printf("count: %i\n", count);
+        printf("divisor: %li\n", divisor);
+        printf("%i\n", firstDigit);
+        printf("%i\n", secondDigit);
     if (sum % 10 == 0)
     {
         if (firstDigit == 3 && (secondDigit == 4 ||  secondDigit == 7 ))
