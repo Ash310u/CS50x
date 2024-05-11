@@ -11,6 +11,7 @@ int main(void)
     while (n <= 0);
 
     long org_n = n;
+    int count = 0;
 
     int sum = 0;
     while (org_n > 0)
@@ -28,6 +29,12 @@ int main(void)
         int multi = lastDigit * 2;
         sum += (multi % 10) + (multi / 10);
         org_n = org_n / 100;
+    }
+
+    org_n = n;
+    while(org_n < 0)
+    {
+
     }
 
     if (sum % 10 == 0)
