@@ -44,21 +44,20 @@ int main(void)
         divisor = divisor * 10;
     }
 
-    int firstDigit = n / divisor;
-    int secondDigit = n / (divisor / 10);
+    int oneDigit = n / divisor;
+    int twoDigit = n / (divisor / 10);
 
     if (sum % 10 == 0)
     {
-        if (count == 15 && (secondDigit == 34 || secondDigit == 37))
+        if (count == 15 && (twoDigit == 34 || twoDigit == 37))
         {
             printf("AMEX\n");
         }
-        else if (count == 16 && (secondDigit == 51 || secondDigit == 52 || secondDigit == 53 ||
-                                 secondDigit == 54 || secondDigit == 55))
+        else if (count == 16 && (twoDigit > 50 && twoDigit < 56))
         {
             printf("MASTERCARD\n");
         }
-        else if ((count == 13 || count == 16) && firstDigit == 4)
+        else if ((count == 13 || count == 16) && oneDigit == 4)
         {
             printf("VISA\n");
         }
