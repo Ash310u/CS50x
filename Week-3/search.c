@@ -1,6 +1,6 @@
-#include <string.h>
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main (void) {
     string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
