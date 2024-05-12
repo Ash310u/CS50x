@@ -6,5 +6,14 @@ int main (void) {
 
     string s = get_string("String: ");
 
-
+    for(int i = 0; i < 6; i++)
+    {
+        if(strings[i] == s)
+        {
+            printf("Found\n");
+            return 0;
+        }
+    }
+    printf("Found\n");
+    return 1;
 }
