@@ -1,3 +1,4 @@
+#include <string.h>
 #include <cs50.h>
 #include <stdio.h>
 
@@ -8,7 +9,7 @@ int main (void) {
 
     for(int i = 0; i < 6; i++)
     {
-        if(strings[i] == s)
+        if(strcmp(strings[i],s))
         {
             printf("Found\n");
             return 0;
