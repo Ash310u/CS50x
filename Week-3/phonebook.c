@@ -7,8 +7,7 @@ typedef struct
 {
     string name;
     string number;
-}
-person;
+} person;
 
 int main (void)
 {
