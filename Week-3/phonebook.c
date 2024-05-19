@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <string.h>
 
+typeDef struct
+{
+    string name;
+    string number;
+}
+person;
+
 int main (void)
 {
     string names[] = {"Ashu", "Ritwik", "Ypk"};
