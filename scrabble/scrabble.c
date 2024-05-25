@@ -16,6 +16,8 @@ int main(void)
     int score_1 = compute_score(word1);
     int score_2 = compute_score(word2);
     // Print the winner
+    printf("%i!\n", score_1);
+    printf("%i!\n", score_2);
     if (score_1 > score_2)
     {
         printf("Player 1 wins!\n");
@@ -33,31 +35,14 @@ int main(void)
 
 int compute_score (string word)
 {
-    // int sum = 0;
-    // for(int i = 0; i < strlen(word); i++)
-    // {
-    //     int point = tolower(word[i]);
-    //     if(point >= 'a' && point <= 'z')
-    //     {
-    //         sum += POINTS[point - 'a'];
-    //     }
-    // }
-    // return sum;
-    // Keep track of score
-    int score = 0;
-
-    // Compute score for each character
-    for (int i = 0, len = strlen(word); i < len; i++)
+    int sum = 0;
+    for(int i = 0; i < strlen(word); i++)
     {
-        if (isupper(word[i]))
+        int point = tolower(word[i]);
+        if(point >= 'a' && point <= 'z')
         {
-            score += POINTS[word[i] - 'A'];
-        }
-        else if (islower(word[i]))
-        {
-            score += POINTS[word[i] - 'a'];
+            sum += POINTS[point - 'a'];
         }
     }
-
-    return score;
+    return sum;
 }
