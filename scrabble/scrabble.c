@@ -10,7 +10,7 @@ int main(void)
     string word2 = get_string("Player 2: ");
 
     // Compute the score of each word
-    const lett
+    const letter[] =
 
     // Print the winner
 }
