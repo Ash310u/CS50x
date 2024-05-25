@@ -27,7 +27,7 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    int count = 0;
+    int count = 0 , i;
     for(int i = 0; text[i] != '\0' ; i++)
     {
         if(text[i] == ' ' && text[i+1] != ' ')
@@ -35,7 +35,7 @@ int words_count(string text)
             count++;
         }
     }
-    return count + 1;
+    return count;
 }
 
 int sentance_count(string text)
