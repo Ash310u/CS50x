@@ -22,6 +22,7 @@ int compute_score (string word)
     for(int i = 0; i < strlen(word); i++)
     {
         int result = tolower(word[i]);
-        printf("%i/n", result);
+        printf("%i\n", result - 65);
     }
+    return 0;
 }
