@@ -11,5 +11,6 @@ int main(void)
 
 int define_grade(string text)
 {
+    int grade = 0;
     
 }
