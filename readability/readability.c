@@ -22,28 +22,28 @@ int main(void)
 
 int letters_count(string text)
 {
-    int count = 0;
+    int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
         if (text[i] >= 33 && text[i] <= 126)
         {
-            count++;
+            letters_count++;
         }
     }
-    return count;
+    return letters_count;
 }
 
 int words_count(string text)
 {
-    int count = 0;
+    int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
         if (text[i] == ' ' && text[i + 1] != ' ')
         {
-            count++;
+            words_count++;
         }
     }
-    return count;
+    return words_count;
 }
 
 int sentance_count(string text)
