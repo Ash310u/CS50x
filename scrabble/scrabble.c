@@ -13,16 +13,23 @@ int main(void)
     string word2 = get_string("Player 2: ");
 
     // Compute the score of each word
-    compute_score(word1);
+    int score_1 = compute_score(word1);
+    int score_2 = compute_score(word2);
     // Print the winner
+    if(score_1)
 }
 
 int compute_score (string word)
 {
     for(int i = 0; i < strlen(word); i++)
     {
-        int result = tolower(word[i]);
-        printf("%i\n", result - 65);
+        int point = tolower(word[i]);
+        int sum = 0;
+        if(point >= 97 && point <= 122)
+        {
+            sum += POINTS[point - 97]
+        }
+        return sum
     }
     return 0;
 }
