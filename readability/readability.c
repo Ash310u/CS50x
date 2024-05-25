@@ -16,7 +16,7 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-    printf("%i\n", num_words);
+    // printf("%i\n", num_words);
 }
 
 int letters_count(string text)
@@ -27,8 +27,7 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    printf("%s\n", strtok(text, " "));
-    // int words = strtok(text, " ");
+    int words = (text, " ");
     return 0;
 }
 
