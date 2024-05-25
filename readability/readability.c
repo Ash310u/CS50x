@@ -16,7 +16,7 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-    // printf("%i\n", num_words);
+    printf("%i\n", num_words);
 }
 
 int letters_count(string text)
@@ -27,11 +27,15 @@ int letters_count(string text)
 
 int words_count(string text)
 {
+    int count = 1;
     for(int i = 0; i < strlen(text); i++)
     {
-        if(text[i] == ' ' && text[])
+        if(text[i] == ' ' && text[i+1] != ' ')
+        {
+            count++;
+        }
     }
-    return 0;
+    return count;
 }
 
 int sentance_count(string text)
