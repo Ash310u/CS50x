@@ -36,10 +36,10 @@ int words_count(string text)
         }
     }
 
-    // if (count > 0)
-    // {
-    //     return count + 1;
-    // }
+    if (count > 0)
+    {
+        return count + 1;
+    }
     return count;
 }
 
