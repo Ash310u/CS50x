@@ -48,8 +48,15 @@ int words_count(string text)
 
 int sentance_count(string text)
 {
-    // Return the number of words in text
-    return 0;
+    int words_count = 0;
+    for (int i = 0; text[i] != '\0'; i++)
+    {
+        if (text[i] == ' ' && text[i + 1] != ' ')
+        {
+            words_count++;
+        }
+    }
+    return words_count;
 }
 
 int grade_count(int L, int S)
