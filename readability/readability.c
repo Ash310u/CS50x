@@ -43,7 +43,11 @@ int words_count(string text)
             count++;
         }
     }
-    return count;
+    if(strlen(text) > 0)
+    {
+        return count + 1;
+    }
+    return 0;
 }
 
 int sentance_count(string text)
