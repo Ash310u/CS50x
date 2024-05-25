@@ -17,7 +17,7 @@ int main(void)
         4, 4, 8,4, 10
     };
 
-    
+
 
     // Print the winner
 }
