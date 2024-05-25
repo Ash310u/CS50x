@@ -16,13 +16,21 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
+    printf("%i\n", num_letters);
     printf("%i\n", num_words);
 }
 
 int letters_count(string text)
 {
-    // Return the number of letters in text
-    return 0;
+    int count = 0;
+    for(int i = 0; text[i] != '\0' ; i++)
+    {
+        if(text[i] >= 'A' && text[i] <= 'z')
+        {
+            count++;
+        }
+    }
+    return count;
 }
 
 int words_count(string text)
