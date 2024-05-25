@@ -15,6 +15,7 @@ int main(void)
 
     int num_letters = count_words(text);
     int num_words = count_words(text);
+    int num_words = sentance_count(text);
 
 }
 
@@ -25,7 +26,7 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    // Return the number of words in text
+    
 }
 
 int sentance_count(string text)
