@@ -2,10 +2,14 @@
 #include <string.h>
 #include <cs50.h>
 
+int define_grade(string text);
 int main(void)
 {
-    string sentence = get_string("Text: ")
+    string text = get_string("Text: ")
 
 }
 
-int define_grade(string )
+int define_grade(string text)
+{
+    
+}
