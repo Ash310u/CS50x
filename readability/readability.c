@@ -35,12 +35,7 @@ int words_count(string text)
             count++;
         }
     }
-
-    if (count > 0)
-    {
-        return count + 1;
-    }
-    return 0;
+    return count + 1;
 }
 
 int sentance_count(string text)
