@@ -21,8 +21,13 @@ int main(void)
     float S = ((float) num_sentances / (float) num_words) * 100;
 
     float grade = grade_count(L, S);
-    int result = round(grade);
-    printf("%i\n", result);
+    int reuslt = round(grade);
+    if(reuslt >= 16)
+    {
+        printf("Grade 16+ \n");
+    } else {
+        printf("Grade %i \n", reuslt);
+    }
 }
 
 int letters_count(string text)
