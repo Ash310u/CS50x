@@ -40,7 +40,7 @@ int words_count(string text)
     {
         return count + 1;
     }
-    return count;
+    return 0;
 }
 
 int sentance_count(string text)
