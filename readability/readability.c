@@ -26,8 +26,10 @@ int main(void)
     {
         printf("Grade 16+ \n");
     }
-    else
+    else if (result < 1)
     {
+        printf("Before Grade 1 \n",);
+    } else {
         printf("Grade %i \n", reuslt);
     }
 }
@@ -63,7 +65,7 @@ int sentance_count(string text)
     int sentances_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        if ((text[i] == '.' || text[i] == '!' || text[i] == '?') && text[i + 1] != ' ')
         {
             sentances_count++;
         }
