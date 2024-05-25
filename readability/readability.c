@@ -7,7 +7,7 @@
 int letters_count(string text);
 int words_count(string text);
 int sentance_count(string text);
-int grade_count(string text);
+int grade_count(int L,int S);
 
 int main(void)
 {
@@ -27,8 +27,9 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    int words = strtok(text, " ");
-    return words;
+    printf("%s\n", strtok(text, " "));
+    // int words = strtok(text, " ");
+    return 0;
 }
 
 int sentance_count(string text)
@@ -40,6 +41,6 @@ int sentance_count(string text)
 int grade_count(int L, int S)
 {
 
-    int grade = 0.0588 * L - 0.296 * S - 15.8
+    // int grade = 0.0588 * L - 0.296 * S - 15.8
     return 0;
 }
