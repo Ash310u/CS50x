@@ -25,7 +25,7 @@ int letters_count(string text)
     int count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] >= 'A' && text[i] <= 'z')
+        if (text[i] >= 33 && text[i] <= 126)
         {
             count++;
         }
