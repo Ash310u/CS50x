@@ -17,11 +17,11 @@ int main(void)
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
 
-    float L = (num_letters / num_words) * 100;
-    float S = (num_sentances / num_words) * 100;
+    float L = ((float) num_letters / (float) num_words) * 100;
+    float S = ((float) num_sentances / (float) num_words) * 100;
 
-    int grade = grade_count(L, S);
-    printf("%d\n", grade);
+    float grade = grade_count(L, S);
+    printf("%i\n", grade);
 }
 
 int letters_count(string text)
