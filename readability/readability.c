@@ -21,16 +21,16 @@ int main(void)
     float S = ((float) num_sentances / (float) num_words) * 100;
 
     float grade = grade_count(L, S);
-    int reuslt = round(grade);
-    if (reuslt >= 16)
+    int result = round(grade);
+    if (result >= 16)
     {
         printf("Grade 16+ \n");
     }
     else if (result < 1)
     {
-        printf("Before Grade 1 \n",);
+        printf("Before Grade 1 \n");
     } else {
-        printf("Grade %i \n", reuslt);
+        printf("Grade %i \n", result);
     }
 }
 
