@@ -33,14 +33,31 @@ int main(void)
 
 int compute_score (string word)
 {
-    int sum = 0;
-    for(int i = 0; i < strlen(word); i++)
+    // int sum = 0;
+    // for(int i = 0; i < strlen(word); i++)
+    // {
+    //     int point = tolower(word[i]);
+    //     if(point >= 'a' && point <= 'z')
+    //     {
+    //         sum += POINTS[point - 'a'];
+    //     }
+    // }
+    // return sum;
+    // Keep track of score
+    int score = 0;
+
+    // Compute score for each character
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
-        int point = tolower(word[i]);
-        if(point >= 97 && point <= 122)
+        if (isupper(word[i]))
         {
-            sum += POINTS[point - 97];
+            score += POINTS[word[i] - 'A'];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
         }
     }
-    return sum;
+
+    return score;
 }
