@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +7,7 @@
 int letters_count(string text);
 int words_count(string text);
 int sentance_count(string text);
-int grade_count(int L,int S);
+int grade_count(int L, int S);
 
 int main(void)
 {
@@ -16,16 +16,16 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-    // printf("%i\n", num_letters);
+    printf("%i\n", num_letters);
     printf("%i\n", num_words);
 }
 
 int letters_count(string text)
 {
     int count = 0;
-    for(int i = 0; i < strlen(text) ; i++)
+    for (int i = 0; text[i] != '\0'; i++)
     {
-        if(text[i] >= 'A' && text[i] <= 'z')
+        if (text[i] >= 'A' && text[i] <= 'z')
         {
             count++;
         }
@@ -36,15 +36,12 @@ int letters_count(string text)
 int words_count(string text)
 {
     int count = 0;
-    if( strlen(text) > 0)
+    count++;
+    for (int i = 0; text[i] != '\0'; i++)
     {
-        count++;
-        for(int i = 0; text[i] != '\0' ; i++)
+        if (text[i] == ' ' && text[i + 1] != ' ')
         {
-            if(text[i] == ' ' && text[i+1] != ' ')
-            {
-                count++;
-            }
+            count++;
         }
     }
     return count;
