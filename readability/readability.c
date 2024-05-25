@@ -24,13 +24,13 @@ int main(void)
     int result = round(grade);
     if (result >= 16)
     {
-        printf("Grade 16+ \n");
+        printf("Grade 16+\n");
     }
     else if (result < 1)
     {
-        printf("Before Grade 1 \n");
+        printf("Before Grade 1\n");
     } else {
-        printf("Grade %i \n", result);
+        printf("Grade %i\n", result);
     }
 }
 
