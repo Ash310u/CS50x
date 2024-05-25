@@ -27,7 +27,10 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    int words = (text, " ");
+    for(int i = 0; i < strlen(text); i++)
+    {
+        if(text[i] == ' ' && text[])
+    }
     return 0;
 }
 
