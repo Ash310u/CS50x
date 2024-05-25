@@ -30,16 +30,15 @@ int main(void)
     {
         printf("Tie!\n");
     }
-
 }
 
-int compute_score (string word)
+int compute_score(string word)
 {
     int sum = 0;
-    for(int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         int point = tolower(word[i]);
-        if(point >= 'a' && point <= 'z')
+        if (point >= 'a' && point <= 'z')
         {
             sum += POINTS[point - 'a'];
         }
