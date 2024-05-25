@@ -18,6 +18,7 @@ int main(void)
     int num_sentances = sentance_count(text);
     printf("%i\n", num_letters);
     printf("%i\n", num_words);
+    printf("%i\n", num_sentances);
 }
 
 int letters_count(string text)
@@ -48,15 +49,15 @@ int words_count(string text)
 
 int sentance_count(string text)
 {
-    int words_count = 0;
+    int sentances_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == ' ' && text[i + 1] != ' ')
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
-            words_count++;
+            sentances_count++;
         }
     }
-    return words_count;
+    return sentances_count;
 }
 
 int grade_count(int L, int S)
