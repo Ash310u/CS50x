@@ -55,7 +55,7 @@ int words_count(string text)
         if (text[i] == ' ' && text[i+1] != ' ')
             words_count++;
     }
-    return words_count;
+    return words_count + 1;
 }
 
 int sentance_count(string text)
