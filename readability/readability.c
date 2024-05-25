@@ -21,7 +21,8 @@ int main(void)
     float S = ((float) num_sentances / (float) num_words) * 100;
 
     float grade = grade_count(L, S);
-    printf("%f\n", grade);
+    int result = round(grade);
+    printf("%i\n", result);
 }
 
 int letters_count(string text)
