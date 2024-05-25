@@ -22,10 +22,12 @@ int main(void)
 
     float grade = grade_count(L, S);
     int reuslt = round(grade);
-    if(reuslt >= 16)
+    if (reuslt >= 16)
     {
         printf("Grade 16+ \n");
-    } else {
+    }
+    else
+    {
         printf("Grade %i \n", reuslt);
     }
 }
@@ -45,7 +47,7 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    int words_count = 0;
+    int words_count = 1;
     for (int i = 0; text[i] != '\0'; i++)
     {
         if (text[i] == ' ' && text[i + 1] != ' ')
