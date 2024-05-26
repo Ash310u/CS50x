@@ -23,6 +23,9 @@ int main(void)
 
     int grade = grade_count(L, S);
 
+    printf("L = %f\n", L);
+    printf("S = %f\n", S);
+
     if (grade >= 16)
     {
         printf("Grade 16+\n");
