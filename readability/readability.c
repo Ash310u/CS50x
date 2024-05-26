@@ -54,7 +54,7 @@ int words_count(string text)
     int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == ' ' || text[i] == '\t' || text[i] == '\n' || text[i] == '\0')
+        if (text[i] == ' ' && text[i] != '')
             words_count++;
     }
     return words_count;
