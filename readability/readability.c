@@ -13,25 +13,21 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int num_letters = letters_count(text);
-    int num_words = words_count(text);
-    int num_sentences = sentance_count(text);
+    float num_letters = letters_count(text);
+    float num_words = words_count(text);
+    float num_sentences = sentance_count(text);
 
 
-    float L = ((float) num_letters / (float) num_words) * 100;
-    float S = ((float) num_sentences / (float) num_words) * 100;
+    float L = (num_letters / num_words) * 100;
+    float S = (num_sentences / num_words) * 100;
 
     float grade = grade_count(L, S);
-    int result = roundf(grade);
+    int result = round(grade);
 
     printf("grade = %f\n", grade);
 
     printf("L = %f\n", L);
     printf("S = %f\n", S);
-
-    // printf("letters = %i\n", num_letters);
-    // printf("words = %i\n", num_words);
-    // printf("sentances = %i\n", num_sentences);
 
     if (result >= 16)
     {
