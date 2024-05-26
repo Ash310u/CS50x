@@ -16,7 +16,7 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-
+    printf("%d\n", L);
     float L = ((float) num_letters / (float) num_words) * 100;
     float S = ((float) num_sentances / (float) num_words) * 100;
 
@@ -77,8 +77,5 @@ int grade_count(int L, int S)
 {
 
     float grade = 0.0588 * L - 0.296 * S - 15.8;
-    printf("%d\n", L);
-    printf("%d\n", S);
-    printf("%f\n", grade);
     return grade;
 }
