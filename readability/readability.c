@@ -29,7 +29,9 @@ int main(void)
     else if (result < 1)
     {
         printf("Before Grade 1\n");
-    } else {
+    }
+    else
+    {
         printf("Grade %i\n", result);
     }
 }
@@ -52,7 +54,7 @@ int words_count(string text)
     int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == ' ' && text[i+1] != ' ')
+        if (text[i] == ' ' && text[i + 1] != ' ')
             words_count++;
     }
     return words_count + 1;
@@ -63,7 +65,7 @@ int sentance_count(string text)
     int sentances_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if ((text[i] == '.' || text[i] == '!' || text[i] == '?') && text[i + 1] != ' ')
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             sentances_count++;
         }
