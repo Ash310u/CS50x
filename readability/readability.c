@@ -57,7 +57,11 @@ int words_count(string text)
     {
         if (text[i] == ' ' && text[i+1] != ' ')
         {
-            words_count++;
+            printf("i --> %c\n",text[i]);
+            printf("i+1 --> %c\n",text[i+1]);
+            if (text[i] != '.') {
+                words_count++;
+            }
         }
     }
     if (words_count != 0)
