@@ -32,7 +32,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %i\n", grade);
+        printf("%i\n", grade);
     }
 }
 
@@ -83,6 +83,6 @@ int grade_count(int L, int S)
 {
     // float grade = roundf(0.0588 * L - 0.296 * S - 15.8);
     float g = (0.0588 * L - 0.296 * S - 15.8);
-    printf("%f, \n", g);
+    printf("%f\n", g);
     return g;
 }
