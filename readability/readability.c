@@ -55,19 +55,12 @@ int words_count(string text)
     int words_count = 1;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if ((text[i] == ' ' && text[i+1] != ' ') && text[i] != '.')
+        if (text[i] == ' ' && text[i+1] != ' ' && text[i+1] != '\0' && text[i] != '.')
         {
-            printf("i --> %c|\n",text[i]);
-            printf("i+1 --> %c|\n",text[i+1]);
-            printf("%lu\n",strlen(text));
             words_count++;
         }
     }
-    if (strlen(text) > 1)
-    {
-        return words_count + 1;
-    }
-    return 0;
+    return words_count;
 }
 
 int sentance_count(string text)
