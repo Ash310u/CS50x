@@ -41,7 +41,7 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (isalpha(text[i]))
+        if (text[i] >= 'A' && text[i] <= 'Z' && text[i] >= 'a' && text[i] <= 'z' )
         {
             letters_count++;
         }
