@@ -43,7 +43,7 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] >= 48 && text[i] <= 57 || text[i] >= 65 && text[i] <=90 ||)
+        if (text[i] >= 48 && text[i] <= 57 || text[i] >= 65 && text[i] <=90 || text[i] >= 97 && text[i] <= 122)
         {
             letters_count++;
         }
