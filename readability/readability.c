@@ -44,7 +44,8 @@ int letters_count(string text)
     for (int i = 0; text[i] != '\0'; i++)
     {
          // (text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' )
-        if (text[i] != '\0' && text[i] != ' ' && text[i] != '.' && text[i] != '!' && text[i] != '?')
+         // text[i] != '\0' && text[i] != ' ' && text[i] != '.' && text[i] != '!' && text[i] != '?'
+        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' ))
         {
             letters_count++;
         }
