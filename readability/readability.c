@@ -60,12 +60,12 @@ int words_count(string text)
     for (int i = 0; text[i] != '\0'; i++)
     {
         // (text[i] == ' ' && text[i + 1] != ' ' && text[i + 1] != '\0' && text[i] != '.' && text[i] != '-')
-        if (text[i] == ' ' && text[i + 1] != '\0')
+        if (text[i] == ' ')
         {
             words_count++;
         }
     }
-    return words_count;
+    return words_count + 1;
 }
 
 int sentance_count(string text)
