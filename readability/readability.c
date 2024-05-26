@@ -17,14 +17,16 @@ int main(void)
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
 
-    printf("letters ----------------> %i\n", num_letters);
-    printf("words ----------------> %i\n", num_words);
 
     float L = ((float) num_letters / (float) num_words) * 100;
     float S = ((float) num_sentances / (float) num_words) * 100;
 
     float grade = grade_count(L, S);
-    int result = round(grade);
+    int result = roundf(grade);
+
+    // printf("grade = %f\n", grade);
+    // printf("result = %i\n", result);
+
     if (result >= 16)
     {
         printf("Grade 16+\n");
