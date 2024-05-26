@@ -17,7 +17,6 @@ int main(void)
     float num_words = words_count(text);
     float num_sentences = sentance_count(text);
 
-
     float L = (num_letters / num_words) * 100 * 1.0;
     float S = (num_sentences / num_words) * 100 * 1.0;
 
@@ -57,7 +56,8 @@ int words_count(string text)
     int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        // (text[i] == ' ' && text[i + 1] != ' ' && text[i + 1] != '\0' && text[i] != '.' && text[i] != '-')
+        // (text[i] == ' ' && text[i + 1] != ' ' && text[i + 1] != '\0' && text[i] != '.' && text[i]
+        // != '-')
         if (text[i] == ' ')
         {
             words_count++;
@@ -81,6 +81,6 @@ int sentance_count(string text)
 
 int grade_count(int L, int S)
 {
-    float grade = round(0.0588 * L - 0.296 * S - 15.8);
+    float grade = roundf(0.0588 * L - 0.296 * S - 15.8);
     return grade;
 }
