@@ -18,8 +18,8 @@ int main(void)
     float num_sentences = sentance_count(text);
 
 
-    float L = (num_letters / num_words) * 100;
-    float S = (num_sentences / num_words) * 100;
+    float L = (num_letters / num_words) * 100 * 1.0;
+    float S = (num_sentences / num_words) * 100 * 1.0;
 
     float grade = grade_count(L, S);
     int result = round(grade);
