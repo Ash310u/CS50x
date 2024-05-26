@@ -41,10 +41,7 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (isalpha(text[i]))
-        {
-            letters_count++;
-        }
+        letters_count += isalpha(text[i]);
     }
     return letters_count;
 }
