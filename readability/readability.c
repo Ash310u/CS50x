@@ -24,8 +24,8 @@ int main(void)
     float grade = grade_count(L, S);
     int result = roundf(grade);
 
-    // printf("grade = %f\n", grade);
-    // printf("result = %i\n", result);
+    printf("grade = %f\n", grade);
+    printf("letters = %i\n", num_letters);
 
     if (result >= 16)
     {
@@ -48,7 +48,7 @@ int letters_count(string text)
     {
         // (text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' )
         // text[i] != '\0' && text[i] != ' ' && text[i] != '.' && text[i] != '!' && text[i] != '?'
-        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
+        if (isalpha(text[i]))
         {
             letters_count++;
         }
