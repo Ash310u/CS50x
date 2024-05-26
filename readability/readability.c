@@ -25,9 +25,13 @@ int main(void)
     int result = roundf(grade);
 
     printf("grade = %f\n", grade);
-    printf("letters = %i\n", num_letters);
-    printf("words = %i\n", num_words);
-    printf("sentances = %i\n", num_sentences);
+
+    printf("L = %f\n", L);
+    printf("S = %f\n", S);
+
+    // printf("letters = %i\n", num_letters);
+    // printf("words = %i\n", num_words);
+    // printf("sentances = %i\n", num_sentences);
 
     if (result >= 16)
     {
