@@ -82,5 +82,6 @@ int sentance_count(string text)
 int grade_count(int L, int S)
 {
     float grade = roundf(0.0588 * L - 0.296 * S - 15.8);
+    printf("%f\n",grade);
     return grade;
 }
