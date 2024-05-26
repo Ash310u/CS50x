@@ -26,6 +26,7 @@ int main(void)
 
     printf("grade = %f\n", grade);
     printf("letters = %i\n", num_letters);
+    printf("words = %i\n", num_words);
 
     if (result >= 16)
     {
