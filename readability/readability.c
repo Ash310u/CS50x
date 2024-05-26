@@ -17,6 +17,8 @@ int main(void)
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
 
+    printf("letters ----------------> %i\n", num_letters);
+
     float L = ((float) num_letters / (float) num_words) * 100;
     float S = ((float) num_sentances / (float) num_words) * 100;
 
@@ -41,7 +43,8 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' ))
+         // (text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' )
+        if (text[i] != '\0' && text[i] != ' ')
         {
             letters_count++;
         }
