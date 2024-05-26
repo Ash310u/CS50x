@@ -84,5 +84,5 @@ int grade_count(int L, int S)
     float grade = roundf(0.0588 * L - 0.296 * S - 15.8);
     float g = (0.0588 * L - 0.296 * S - 15.8);
     printf("%f, %f\n",grade, g);
-    return grade;
+    return 0;
 }
