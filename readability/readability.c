@@ -16,7 +16,7 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-    printf("%d\n", L);
+    printf("%i\n", num_letters);
     float L = ((float) num_letters / (float) num_words) * 100;
     float S = ((float) num_sentances / (float) num_words) * 100;
 
