@@ -16,7 +16,6 @@ int main(void)
     int num_letters = letters_count(text);
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
-    printf("%i name \t age \n", num_letters);
     printf("%i\n", num_words);
 
     float L = ((float) num_letters / (float) num_words) * 100;
@@ -56,7 +55,7 @@ int words_count(string text)
     int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == ' ' && text[i + 1] != ' ')
+        if (text[i] == ' ' || text[i] == '\t' || text[i] == '\n' || text[i] == '\0')
             words_count++;
     }
     return words_count + 1;
