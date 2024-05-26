@@ -21,25 +21,22 @@ int main(void)
     float L = (num_letters / num_words) * 100 * 1.0;
     float S = (num_sentences / num_words) * 100 * 1.0;
 
-    float grade = grade_count(L, S);
-    int result = round(grade);
-
-    printf("grade = %f\n", grade);
+    int grade = grade_count(L, S);
 
     printf("L = %f\n", L);
     printf("S = %f\n", S);
 
-    if (result >= 16)
+    if (grade >= 16)
     {
         printf("Grade 16+\n");
     }
-    else if (result < 1)
+    else if (grade < 1)
     {
         printf("Before Grade 1\n");
     }
     else
     {
-        printf("Grade %i\n", result);
+        printf("Grade %i\n", grade);
     }
 }
 
@@ -87,6 +84,6 @@ int sentance_count(string text)
 
 int grade_count(int L, int S)
 {
-    float grade = 0.0588 * L - 0.296 * S - 15.8;
+    float grade = round(0.0588 * L - 0.296 * S - 15.8);
     return grade;
 }
