@@ -56,7 +56,7 @@ int letters_count(string text)
 
 int words_count(string text)
 {
-    int words_count = 1;
+    int words_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
         if (text[i] == ' ' && text[i + 1] != ' ' && text[i + 1] != '\0' && text[i] != '.' && text[i] != '-')
