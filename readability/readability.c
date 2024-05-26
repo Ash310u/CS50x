@@ -17,8 +17,6 @@ int main(void)
     int num_words = words_count(text);
     int num_sentances = sentance_count(text);
 
-    // printf("letters ----------------> %i\n", num_letters);
-
     float L = ((float) num_letters / (float) num_words) * 100;
     float S = ((float) num_sentances / (float) num_words) * 100;
 
@@ -43,9 +41,9 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-         // (text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' )
-         // text[i] != '\0' && text[i] != ' ' && text[i] != '.' && text[i] != '!' && text[i] != '?'
-        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' ))
+        // (text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z' )
+        // text[i] != '\0' && text[i] != ' ' && text[i] != '.' && text[i] != '!' && text[i] != '?'
+        if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z'))
         {
             letters_count++;
         }
@@ -58,7 +56,7 @@ int words_count(string text)
     int words_count = 1;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] == ' ' && text[i+1] != ' ' && text[i+1] != '\0' && text[i] != '.')
+        if (text[i] == ' ' && text[i + 1] != ' ' && text[i + 1] != '\0' && text[i] != '.')
         {
             words_count++;
         }
