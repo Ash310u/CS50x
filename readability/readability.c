@@ -21,7 +21,7 @@ int main(void)
     float S = ((float) num_sentances / (float) num_words) * 100;
 
     float grade = grade_count(L, S);
-    int result = roundf(grade);
+    int result = round(grade);
     if (result >= 16)
     {
         printf("Grade 16+\n");
@@ -41,8 +41,7 @@ int letters_count(string text)
     int letters_count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if ((text[i] >= 48 && text[i] <= 57) || (text[i] >= 65 && text[i] <= 90) ||
-            (text[i] >= 97 && text[i] <= 122))
+        if (isalpha(text[i]))
         {
             letters_count++;
         }
@@ -58,7 +57,7 @@ int words_count(string text)
         if (text[i] == ' ' || text[i] == '\t' || text[i] == '\n' || text[i] == '\0')
             words_count++;
     }
-    return words_count + 1;
+    return words_count;
 }
 
 int sentance_count(string text)
