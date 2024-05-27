@@ -6,10 +6,8 @@ int main(void)
     int n = 50;
     int *p = &n;
 
-    string s = "Hi!";
-    string *q = &s;
+    char *s = "Hi!";
 
     printf("%p\n",  s);
     printf("%p\n",  &s[0]);
-    printf("%p\n",  *q);
 }
