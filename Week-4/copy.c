@@ -20,10 +20,11 @@ int main(void)
     }
 
     // We have to set 'i <= n' not 'i < n', Because the 'strlen()' returns human visual length not the actual length with counting '\0'.
-    for(int i = 0, n = strlen(s); i <= n; i++)
-    {
-        t[i] = s[i]; // setting up the data of the string 's' to 't' at a different memory location which is allocated by the 'malloc' function.
-    }
+    // for(int i = 0, n = strlen(s); i <= n; i++)
+    // {
+    //     t[i] = s[i]; // setting up the data of the string 's' to 't' at a different memory location which is allocated by the 'malloc' function.
+    // }
+    strcpy(t,s);
 
     if(strlen(t) > 0) {
         t[0] = toupper(t[0]);
