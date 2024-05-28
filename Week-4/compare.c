@@ -9,6 +9,7 @@ int main(void)
     char *s = get_string("s: ");
     char *t = get_string("t: ");
 
+    // When you compare literarily (s == t), You are basically comparing two different addresses of memories of two different located strings in memory.
     if(s == t) {
         printf("Same\n");
     } else {
