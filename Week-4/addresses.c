@@ -10,13 +10,12 @@ int main(void)
     printf("%p\n",  s);
     printf("%p\n",  &s[0]);
 
-    printf("%c\n",  s[1]);
     printf("-------------------\n");
     // Pointer Arithmetic(Basically Math on Addresses)
-    printf("%c",  *s);
-    printf("%c",  *(s + 1));
-    printf("%c",  *(s + 2));
-    printf("%i\n", *(s + 3));
+    printf("%c",  *s); // s[0]
+    printf("%c",  *(s + 1)); // s[1]
+    printf("%c",  *(s + 2)); // s[2]
+    printf("%i\n", *(s + 3)); // s[3]
 
     printf("-------------------\n");
 
