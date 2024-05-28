@@ -9,7 +9,8 @@ int main(void)
     char *s = get_string("s: ");
 
     // char *t = s; // The Assiegnment(=) operator literarily copy the address on the 's' pointer over to 't' pointer. Both pointed at the same string location in memory.
-    char *t = malloc(strlen(s)); // malloc(Memory Allocation) basically it Allocate 'some numbers(which we provied)' of bytes in the memory.
+    // We have '+ 1' because the 'strlen()' returns human visual length not the actual length with counting '\0'.
+    char *t = malloc(strlen(s) + 1); // malloc(Memory Allocation) basically it Allocate 'some numbers(which we provied)' of bytes in the memory.
 
     for(int i = 0, n = strlen(s); i < n; i++)
     {
