@@ -13,6 +13,9 @@ int main(void)
     // When you compare literarily (s == t), You are basically comparing two different addresses of memories of two different located strings in memory.
     // if(s == t) {}
 
+    printf("%p\n", s);
+    printf("%p\n", t);
+
     printf("%i\n", strcmp(s,t));
     if (strcmp(s,t) == 0) {
         printf("Same\n");
