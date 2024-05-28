@@ -12,7 +12,8 @@ int main(void)
     // We have '+ 1' because the 'strlen()' returns human visual length not the actual length with counting '\0'.
     char *t = malloc(strlen(s) + 1); // malloc(Memory Allocation) basically it Allocate 'some numbers(which we provied)' of bytes in the memory.
 
-    for(int i = 0, n = strlen(s); i < n; i++)
+    // Because the 'strlen()' returns human visual length not the actual length with counting '\0' so we have to set 'i <= n' not 'i < n'.
+    for(int i = 0, n = strlen(s); i <= n; i++)
     {
         t[i] = s[i]; // setting up the data of the string 's' to 't' at a different memory location which is allocated by the 'malloc' function.
     }
