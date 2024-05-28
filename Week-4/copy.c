@@ -34,4 +34,7 @@ int main(void)
     printf("%s\n", s);
     printf("%s\n", t);
     printf("%lu\n", strlen(s));
+
+    // basically free the allocated memory by using 'malloc' function over 't'.
+    free(t);
 }
