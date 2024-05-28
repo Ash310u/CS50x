@@ -25,6 +25,5 @@ int main(void)
     // The both are get capitalized cause the 'addresses are same'.
     printf("%s\n", s);
     printf("%s\n", t);
-    printf("%c\n", t[3]);
     printf("%lu\n", strlen(s));
 }
