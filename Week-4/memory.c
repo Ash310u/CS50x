@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    int *x = malloc(3 * sizeof(int));
+    int *x = malloc(sizeof(int));
 
     x[0] = 73;
-    x[0] = 73;
-    x[0] = 73;
-    printf("%i\n", x[12]);
+    x[1] = 74;
+    x[2] = 33;
+    printf("%i\n", x[0]);
 }
