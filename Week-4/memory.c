@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    // sizeof
+    // sizeof : Generates the storage size of an expression or a data type, measured in the number of char-sized units
     int *x = malloc(sizeof(int));
 
     x[0] = 73;
