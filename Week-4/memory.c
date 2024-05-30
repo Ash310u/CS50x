@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    // sizeof
     int *x = malloc(sizeof(int));
 
     x[0] = 73;
