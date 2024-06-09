@@ -37,7 +37,7 @@ void print_row(int length, int space_length)
     // }
     for (int j = 0; j <= length; j++)
     {
-        if (space_length <= j)
+        if (space_length >= j)
         {
             printf("#");
         }
