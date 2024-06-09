@@ -24,18 +24,7 @@ int main(void)
 void print_row(int length, int space_length)
 {
     // second loop will print Horizontal
-    // for (int j = length; j >= 1; j--)
-    // {
-    //     if (space_length >= j)
-    //     {
-    //         printf("#");
-    //     }
-    //     else
-    //     {
-    //         printf(" ");
-    //     }
-    // }
-    for (int j = 0; j <= length; j++)
+    for (int j = length; j >= 1; j--)
     {
         if (space_length >= j)
         {
@@ -46,4 +35,16 @@ void print_row(int length, int space_length)
             printf(" ");
         }
     }
+    // Testing --
+    // for (int j = 0; j <= length; j++)
+    // {
+    //     if (space_length >= j)
+    //     {
+    //         printf("#");
+    //     }
+    //     else
+    //     {
+    //         printf(" ");
+    //     }
+    // }
 }

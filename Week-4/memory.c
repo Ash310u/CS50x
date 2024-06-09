@@ -11,4 +11,4 @@ int main(void)
     x[2] = 33;
 
     free(x);
-}
+}c
