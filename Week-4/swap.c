@@ -7,14 +7,16 @@ int main(void)
     int y = 2;
     printf("Before Swapping x = %i, y = %i \n", x, y);
     printf("Before Swapping x = %p, y = %p \n", &x, &y);
+
     swap(&x, &y);
+
     printf("Before Swapping x = %i, y = %i \n", x, y);
     printf("Before Swapping x = %p, y = %p \n", &x, &y);
 }
 
 int swap(int *a, int *b)
 {
-    int *tmp = a;
+    int tmp = *a;
     a = b;
     b = tmp;
     return 0;
