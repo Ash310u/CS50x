@@ -12,6 +12,7 @@ int main(void)
 
     printf("Before Swapping x = %i, y = %i \n", x, y);
     printf("Before Swapping x = %p, y = %p \n", &x, &y);
+    printf("%n\n", *x);
 }
 
 int swap(int *a, int *b)
