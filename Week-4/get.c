@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    char n;
+    int n;
     printf("n: ");
-    scanf("%c", &n);
-    printf("n: %\n", n);
+    scanf("%i", &n);
+    printf("n: %i\n", n);
 }
