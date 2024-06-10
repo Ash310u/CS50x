@@ -4,6 +4,6 @@ int main(void)
 {
     char *s;
     printf("s: ");
-    scanf("%c", s);
-    printf("s: %c\n", s);
+    scanf("%s", s);
+    printf("s: %s\n", s);
 }
