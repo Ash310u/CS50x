@@ -9,6 +9,11 @@ int main(void)
 
     char c;
     printf("c: ");
-    scanf("%c", c);
+    scanf("%c", &c);
     printf("c: %c\n", c);
+
+    int i;
+    printf("i: ");
+    scanf("%i", &i);
+    printf("i: %i\n", i);
 }
