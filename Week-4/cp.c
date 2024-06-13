@@ -9,4 +9,6 @@ int main(int argc, char *argv[])
     FILE *dst = fopen(argv[2], "wb");
 
     BYTE b;
+
+    while ()
 }
