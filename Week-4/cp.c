@@ -12,6 +12,6 @@ int main(int argc, char *argv[])
 
     while (fread(&b, sizeof(b), 1, src) != 0)
     {
-        fwirte()
+        fwirte(&b, sizeof(b), 1, dst);
     }
 }
