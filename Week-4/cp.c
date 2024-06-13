@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     while (fread(&b, sizeof(b), 1, src) != 0)
     {
-        fwirte(&b, sizeof(b), 1, dst);
+        fwrite(&b, sizeof(b), 1, dst);
     };
 
     fclose(src);
