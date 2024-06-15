@@ -18,39 +18,34 @@ int main(int argc , char *argv[])
     {
         if(isalpha(plaintext[n]))
         {
-            char c = *(plaintext + n);
-            if(isupper(c))
+            char *c = &plaintext[n];
+            if(isupper(*c))
             {
-                int value = c + i;
-                if (value > 90)
+                *c = *c + i;
+                if (*c > 90)
                 {
-                    value = value - 26;
+                    *c = *c - 26;
                 }
-                if (value < 65)
+                if (*c < 65)
                 {
-                    value = value + 26;
+                    *c = *c + 26;
                 }
-                printf("%c\n", value);
             }
 
-            if(islower(c))
+            if(islower(*c))
             {
-                char value = c + i;
-                if (value > 122)
+                *c = *c + i;
+                if (*c > 122)
                 {
-                    value = value - 26;
+                    *c = *c - 26;
                 }
-                if (value < 97)
+                if (*c < 97)
                 {
-                    value = value + 26;
+                    *c = *c + 26;
                 }
-                printf("%c\n", value);
             }
 
-        } else
-        {
-            printf("%c\n", plaintext[n]);
         }
     }
-
+    printf("%s\n", plaintext);
 }
