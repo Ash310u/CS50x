@@ -4,6 +4,7 @@
         "string": "c",
         "stdio.h": "c",
         "cs50.h": "c",
-        "functional": "c"
+        "functional": "c",
+        "ctype.h": "c"
     }
 }
