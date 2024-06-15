@@ -4,7 +4,7 @@
 
 int main(int argc , char *argv[])
 {
-        printf("number: %lu\n", sizeof(*argv));
+        printf("number: %i\n", atoi(argv[1]));
     if (sizeof(*argv) == 2)
     {
         int i = atoi(argv[1]);
