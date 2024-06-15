@@ -25,14 +25,12 @@ int main(int argc , char *argv[])
                 if (value > 90)
                 {
                     value = value - 26;
-                    printf("%i\n", value);
                 }
                 if (value < 65)
                 {
                     value = value + 26;
-                    printf("%i\n", value);
                 }
-                printf("%i\n", value);
+                printf("%c\n", value);
             }
 
             if(islower(c))
@@ -41,14 +39,12 @@ int main(int argc , char *argv[])
                 if (value > 122)
                 {
                     value = value - 26;
-                    printf("%i\n", value);
                 }
                 if (value < 97)
                 {
                     value = value + 26;
-                    printf("%i\n", value);
                 }
-                printf("%i\n", value);
+                printf("%c\n", value);
             }
 
         } else
