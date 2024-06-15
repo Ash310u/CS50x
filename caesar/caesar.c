@@ -18,8 +18,8 @@ int main(int argc , char *argv[])
     {
         if(isalpha(plaintext[n]))
         {
-            int value = *(plaintext + n);
-            printf("%c\n", value);
+            char c = *(plaintext + n);
+            if(ispper())
 
         } else
         {
