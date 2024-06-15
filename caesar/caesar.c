@@ -22,14 +22,33 @@ int main(int argc , char *argv[])
             if(isupper(c))
             {
                 int value = c + i;
-                if value 
+                if (value > 90)
+                {
+                    value = value - 26;
+                    printf("%i\n", value);
+                }
+                if (value < 65)
+                {
+                    value = value + 26;
+                    printf("%i\n", value);
+                }
                 printf("%i\n", value);
             }
 
             if(islower(c))
             {
                 char value = c + i;
-                printf("%c\n", value);
+                if (value > 122)
+                {
+                    value = value - 26;
+                    printf("%i\n", value);
+                }
+                if (value < 97)
+                {
+                    value = value + 26;
+                    printf("%i\n", value);
+                }
+                printf("%i\n", value);
             }
 
         } else
