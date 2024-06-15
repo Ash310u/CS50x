@@ -5,21 +5,25 @@
 
 int main(int argc , char *argv[])
 {
-    if (!argv[1] || atoi(argv[1]) == 0 )
+    if ((!argv[1] || atoi(argv[1]) == 0) || argv[2])
     {
-    printf("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key \n");
         return 0;
     }
 
     int i = atoi(argv[1]);
     char *plaintext = get_string("plaintext: ");
 
-    for(int n = 0; plaintext[n] != '\0', n++)
+    for(int n = 0; plaintext[n] != '\0'; n++)
     {
         if(isalpha(plaintext[n]))
         {
-            int *pntr = *plaintext + n;
-            printf("%p\n", *pntr)
+            int value = *(plaintext + n);
+            printf("%c\n", value);
+
+        } else
+        {
+            printf("%c\n", plaintext[n]);
         }
     }
 
