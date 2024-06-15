@@ -12,7 +12,13 @@ int main(int argc , char *argv[])
     }
 
     int i = atoi(argv[1]);
-    char *sentance = get_string("plaintext: ")
-    while ()
+    char *plaintext = get_string("plaintext: ")
+    for(int n = 0; plaintext[n] != '\0', n++)
+    {
+        if(isalpha(plaintext[n]))
+        {
+            
+        }
+    }
 
 }
