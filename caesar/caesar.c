@@ -4,15 +4,13 @@
 
 int main(int argc , char *argv[])
 {
-        printf("number: %i\n", atoi(argv[1]));
-    if (sizeof(*argv) == 2)
+    int i = 0;
+    if (argv[1] && atoi(argv[1]) != 0 )
     {
-        int i = atoi(argv[1]);
-        printf("number: %i\n", i);
-    } else
-    {
-        printf("./caesar key\n");
-        return 1;
+        i = atoi(argv[1]);
+        printf("Usage: ./caesar key\n");
+        return 0;
     }
+    printf("%i\n", i);
 
 }
