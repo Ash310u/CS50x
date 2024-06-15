@@ -19,7 +19,18 @@ int main(int argc , char *argv[])
         if(isalpha(plaintext[n]))
         {
             char c = *(plaintext + n);
-            if(ispper())
+            if(isupper(c))
+            {
+                int value = c + i;
+                if value 
+                printf("%i\n", value);
+            }
+
+            if(islower(c))
+            {
+                char value = c + i;
+                printf("%c\n", value);
+            }
 
         } else
         {
