@@ -35,16 +35,17 @@ int main(int argc , char *argv[])
             if(islower(*c))
             {
                 printf("%i\n", *c);
-                printf("%i\n", *c+i);
                 *c = *c + i;
                 printf("%i\n", *c);
                 if (*c > 122)
                 {
                     *c = *c - 26;
+                printf("%i\n", *c);
                 }
                 if (*c < 97)
                 {
                     *c = *c + 26;
+                printf("%i\n", *c);
                 }
             }
 
