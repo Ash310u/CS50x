@@ -35,7 +35,7 @@ int main(int argc , char *argv[])
             if(islower(*c))
             {
                 *c = *c + i;
-                printf("%i\n", *c);
+                printf("%c\n", *c);
                 if (*c > 122)
                 {
                     *c = *c - 26;
