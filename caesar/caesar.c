@@ -35,7 +35,7 @@ int main(int argc , char *argv[])
             if(islower(*c))
             {
                 printf("%i\n", *c);
-                *c = *c + i;
+                *c = (*c + i) * -1;
                 printf("%i\n", *c);
                 if (*c > 122)
                 {
