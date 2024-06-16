@@ -41,7 +41,7 @@ int main(int argc , char *argv[])
                 {
                     *c = *c - 26;
                 }
-                if (*c > 97)
+                if (*c < 97)
                 {
                     *c = *c + 26;
                 }
