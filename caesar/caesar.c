@@ -49,5 +49,5 @@ int main(int argc , char *argv[])
 
         }
     }
-    printf("%s\n", plaintext);
+    printf("ciphertext: %s\n", plaintext);
 }
