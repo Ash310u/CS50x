@@ -19,13 +19,7 @@ int main(int argc, char *argv[])
         if (isalpha(plaintext[n]))
         {
             int c = plaintext[n];
-            printf("%i\n", c);
-            if (i > 0 && i < 26)
-            {
-                c = c + i;
-                printf("%i\n", c);
-            }
-            if (isupper(c))
+            if (isupper(plaintext[n]))
             {
                 c = c + i;
                 if (c > 90)
@@ -38,11 +32,11 @@ int main(int argc, char *argv[])
                 }
             }
 
-            if (islower(c))
+            if (islower(plaintext[n]))
             {
-                // printf("%i\n", c);
+                printf("%i\n", c);
                 c = c + i;
-                // printf("%i\n", c);
+                printf("%i\n", c);
                 if (c > 122)
                 {
                     c = c - 26;
@@ -52,6 +46,7 @@ int main(int argc, char *argv[])
                     c = c + 26;
                 }
             }
+            plaintext[n] = c;
         }
     }
     printf("ciphertext: %s\n", plaintext);
