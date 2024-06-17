@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     if (argc != 2 || atoi(argv[1]) == 0)
     {
         printf("Usage: ./caesar key \n");
-        return 0;
+        return 1;
     }
 
     int i = atoi(argv[1]);
@@ -31,4 +31,5 @@ int main(int argc, char *argv[])
         }
     }
     printf("ciphertext: %s\n", plaintext);
+    return 0;
 }
