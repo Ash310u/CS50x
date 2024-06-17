@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
-    if ((!argv[1] || atoi(argv[1]) == 0) || argv[2])
+    if (argc != 2 || atoi(argv[1]) == 0)
     {
         printf("Usage: ./caesar key \n");
         return 0;
