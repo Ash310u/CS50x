@@ -11,22 +11,22 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int i = atoi(argv[1]);
+    int key = atoi(argv[1]);
     char *plaintext = get_string("plaintext: ");
 
     for (int n = 0; plaintext[n] != '\0'; n++)
     {
         if (isalpha(plaintext[n]))
         {
-            int c = plaintext[n];
+            char c = plaintext[n];
             if (isupper(plaintext[n]))
             {
-                c = (c - 'A' + i) % 26 + 'A';
+                c = (c - 'A' + key) % 26 + 'A';
             }
 
             if (islower(plaintext[n]))
             {
-                c = (c - 'a' + i) % 26 + 'a';
+                c = (c - 'a' + key) % 26 + 'a';
             }
             plaintext[n] = c;
         }
