@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+bool is_numeric(string s);
 int main(int argc, char *argv[])
 {
-    if (argc != 2 || atoi(argv[1]) == 0)
+    if (argc != 2 || !is_numeric(argv[1]))
     {
         printf("Usage: ./caesar key \n");
         return 1;
@@ -34,4 +35,16 @@ int main(int argc, char *argv[])
 
     printf("ciphertext: %s\n", plaintext);
     return 0;
+}
+
+bool is_numeric(string s)
+{
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if (!isdigit(s[i]))
+        {
+            return false;
+        }
+    }
+    return true;
 }
