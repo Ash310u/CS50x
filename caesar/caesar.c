@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 
     int i = atoi(argv[1]);
     char *plaintext = get_string("plaintext: ");
-    char *ciphertext = ;
     for (int n = 0; plaintext[n] != '\0'; n++)
     {
         if (isalpha(plaintext[n]))
@@ -27,11 +26,9 @@ int main(int argc, char *argv[])
             if (islower(plaintext[n]))
             {
                 c = (c - 'a' + i) % 26 + 'a';
-                printf("%c\n", c);
-                printf("%i\n", c);
             }
-            ciphertext[n] = c;
+            plaintext[n] = c;
         }
     }
-    printf("ciphertext: %s\n", ciphertext);
+    printf("ciphertext: %s\n", plaintext);
 }
