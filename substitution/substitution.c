@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main(void)
+int main(inst argc , char *argv[])
 {
-    char 
+    if(argc != 26 || !(argv[1]))
     return 0;
 }
