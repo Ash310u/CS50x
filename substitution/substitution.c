@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution keylength = 26 \n");
         return 1;
     }
-                // printf("value: %s\n", *(cipherText+n) );
-    // printf("value: %s", cipherText);
+    printf("value: %s\n", *(cipherText + 1));
     return 0;
 }
