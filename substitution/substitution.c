@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
             else
             {
                 n++;
+                cipherText
             }
         }
     }
@@ -26,4 +27,4 @@ int main(int argc, char *argv[])
         return 1;
     }
     return 0;
-} 
+}
