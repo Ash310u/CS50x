@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
         {
             if (isalpha((unsigned char) argv[1][n]) == 0)
             {
-                printf("Usage: ./substitution key \n");
+                printf("Usage: ./substitution key should be Alphabet \n");
                 return 1;
             }
             else
