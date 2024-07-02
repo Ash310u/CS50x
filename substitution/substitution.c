@@ -3,12 +3,24 @@
 
 int main(int argc , char *argv[])
 {
-    for(int n = 0; n < 26; n++)
+    if (argc != 2)
     {
-        // if(argc != 26 || isalpha(argv[]))
-        printf("%i\n",isalpha((unsigned char)argv[1][n]));
+        int n = 0;
+        while (n < 26)
+        {
+            if(isalpha((unsigned char)argv[1][n]) == 0)
+            {
+                printf("Usage: ./substitution key \n");
+                return 1;
+            } else
+            {
+                printf("%i\n", argc);
+                n++;
+            }
+
+        }
+    } else {
 
     }
-// printf("%i\n",isalpha((unsigned char)argv[1]));
     return 0;
 }
