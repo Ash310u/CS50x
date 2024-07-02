@@ -3,7 +3,12 @@
 
 int main(int argc , char *argv[])
 {
-    // if(argc != 26 || isalpha(argv[]))
-printf("%i\n",isalpha((unsigned char)argv[1][0]));
+    for(int n = 0; n < 26; n++)
+    {
+        // if(argc != 26 || isalpha(argv[]))
+        printf("%i\n",isalpha((unsigned char)argv[1][n]));
+
+    }
+// printf("%i\n",isalpha((unsigned char)argv[1]));
     return 0;
 }
