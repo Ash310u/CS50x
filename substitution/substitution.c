@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
         int n = 0;
         do
         {
-            if (isalpha((unsigned char) argv[1][n]) == 0)
+            if (isalpha((unsigned char) argv[1][n]) == 0 && n >= 25)
             {
 
                 printf("Usage: ./substitution key should be Alphabet \n");
