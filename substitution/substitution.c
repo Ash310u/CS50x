@@ -18,7 +18,10 @@ int main(int argc, char *argv[])
             n++;
         }
         while (n <= 25);
-        cipherText = argv[1];
+        // if (n <= 25)
+        // {
+        // }
+            cipherText = argv[1];
     }
     else
     {
