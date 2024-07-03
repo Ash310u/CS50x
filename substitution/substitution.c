@@ -16,15 +16,16 @@ int main(int argc, char *argv[])
             }
             else
             {
-                if (n > 26)
-                {
-                    printf("Usage: ./substitution key length = 26, %i\n", n);
-                    return 1;
-                }
-                else
+                if (n < 26)
                 {
                     *(cipherText + n) = &argv[1][n];
                     n++;
+                    printf("Usage: ./substitution key length = 26, %i\n", n);
+                }
+                else
+                {
+                    printf("Usage: ./substitution key length = 26, %i\n", n);
+                    return 1;
                 }
             }
         }
