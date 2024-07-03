@@ -3,17 +3,21 @@
 
 int main(int argc, char *argv[])
 {
-    char *cipherText[26];
+    char *cipherText;
     if (argc == 2)
     {
-        int n = 0;
-        do
+        // int n = 0;
+        // do
+        for(int n = 0; n <= 25; n++)
         {
             if (isalpha((unsigned char) argv[1][n]) != 0)
             {
                 *(cipherText + n) = &argv[1][n];
                 n++;
-                // printf("Usage: ./substitution key length = 26, %i = %c\n", n, argv[1][n]);
+                if (n >= 26)
+                {
+                    printf("Usage: ./substitution key length = 26, %i = %c\n", n, argv[1][n]);
+                }
             }
             else
             {
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-        while (n <= 25);
+        // while (n <= 25);
     }
     else
     {
