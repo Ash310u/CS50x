@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         do
         {
 
-            if (n >= 26)
+            if (n <= 25)
             {
                  if (isalpha((unsigned char) argv[1][n]) == 0)
                 {
@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
                 n++;
             }
 
-            if(n <= 25)
+            if(n > 26)
             {
                 printf("Usage: ./substitution key.length = 26\n");
                 return 1;
             }
         }
-        while (n <= 25);
+        while (n <= 26);
         cipherText = argv[1];
     }
     else
