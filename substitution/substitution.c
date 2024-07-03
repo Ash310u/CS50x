@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
                 // }
             }
         }
-        while (n < 26)
+        while (n < 26);
     }
     else
     {
