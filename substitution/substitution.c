@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         int n = 0;
-        while (n <= 25)
+        do
         {
             if (isalpha((unsigned char) argv[1][n]) != 0)
             {
@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
+        while (n <= 25);
     }
     else
     {
