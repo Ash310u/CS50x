@@ -3,10 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-    int n = 0;
     char *cipherText[26];
     if (argc == 2)
     {
+        int n = 0;
         while (n < 26)
         {
             if (isalpha((unsigned char) argv[1][n]) == 0)
@@ -35,6 +35,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %c\n", *(cipherText[n]));
+    printf("value: %s\n", *(cipherText));
     return 0;
 }
