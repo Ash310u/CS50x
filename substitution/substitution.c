@@ -7,26 +7,26 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         int n = 0;
-        while (n < 26)
+        while (n <= 25)
         {
-            if (isalpha((unsigned char) argv[1][n]) != 0)
-            {
-                if (n <= 26)
-                {
-                    *(cipherText + n) = &argv[1][n];
-                    n++;
-                    printf("Usage: ./substitution key length = 26, %i = %c\n", n, argv[1][n]);
-                }
-                else
-                {
-                    printf("Usage: ./substitution key length = 26, %i\n", n);
-                    return 1;
-                }
-            }
-            else
+            if (isalpha((unsigned char) argv[1][n]) == 0)
             {
                 printf("Usage: ./substitution key should be Alphabet \n");
                 return 1;
+            }
+            else
+            {
+                // if (n <= 25)
+                // {
+                    *(cipherText + n) = &argv[1][n];
+                    n++;
+                    // printf("Usage: ./substitution key length = 26, %i = %c\n", n, argv[1][n]);
+                // }
+                // else
+                // {
+                    // printf("Usage: ./substitution key length = 26, %i\n", n);
+                    // return 1;
+                // }
             }
         }
     }
