@@ -20,11 +20,8 @@ int main(int argc, char *argv[])
                 n++;
             }
 
-            if(n > 26)
-            {
-                printf("Usage: ./substitution key.length = 26\n");
-                return 1;
-            }
+            // printf("Usage: ./substitution key.length = 26 \n");
+            // return 1;
         }
         while (n <= 26);
         cipherText = argv[1];
