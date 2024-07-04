@@ -18,9 +18,6 @@ int main(int argc, char *argv[])
                     return 1;
                 }
                 n++;
-            } else {
-                printf("Usage: ./substitution key.length = 26 \n");
-                return 1;
             }
         }
         while (n <= 25);
