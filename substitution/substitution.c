@@ -18,13 +18,17 @@ int main(int argc, char *argv[])
                     return 1;
                 }
                 n++;
-                if (argv[1][n] != '\0')
+                if (argv[1][n] == '\0')
                 {
-                    cipherText = argv[1];
+                    printf("Usage: ./substitution key should be 26 character\n");
                 }
             }
         }
         while (n <= 25);
+        if (argv[1][25] == '\0')
+        {
+            cipherText = argv[1];
+        }
     }
     else
     {
