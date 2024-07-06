@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-    char *cipherText;
+    char *cipherText[26];
     if (argc == 2)
     {
         int n = 0;
