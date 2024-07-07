@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
                 if (*cipherText[n] == argv[1][i])
                 {
                     printf("Usage: 26 Unique Alphabet\n");
-                    printf("value: %c, %s\n", argv[1][i], cipherText[n]);
+                    printf("value: %c, %c\n", argv[1][n], *cipherText[i]);
                     return 1;
                 }
             }
