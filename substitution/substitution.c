@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
             // {
             //     if (&argv[1][n] ==  cipherText[i]) {
             //         printf("value: %s == %s\n", cipherText[i], &argv[1][n]);
+            //         printf("value: %p == %p\n", cipherText[0], &argv[1][0]);
             //     }
             // }
             n++;
         }
         while (n <= 25);
-        printf("value: %p == %p\n", cipherText[0], &argv[1][0]);
     }
     else
     {
