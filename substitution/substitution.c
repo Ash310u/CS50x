@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
             else {
-                cipherText[n] = *argv[1][n];
+                cipherText[n] = argv[1][n];
             }
             n++;
         }
@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %p == %p\n", *cipherText[0], *argv[1][0]);
+    printf("value: %c == %p\n", *cipherText, &argv[1][0]);
     return 0;
 }
