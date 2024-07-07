@@ -4,10 +4,15 @@
 int main(int argc, char *argv[])
 {
     char *p = &argv[1][0];
-    char *cipherText[2] = &argv[1][0];
+    char *cipherText[26];
     if (argc == 2)
     {
         int n = 0;
+        if (argv[1][26] != '\0')
+        {
+            printf("Usage: ./substitution key should be 26 character\n");
+            return 1;
+        }
         do
         {
             if (isalpha((unsigned char) argv[1][n]) == 0)
@@ -15,23 +20,15 @@ int main(int argc, char *argv[])
                 printf("Usage: ./substitution key should be Alphabet \n");
                 return 1;
             }
-            for(int i = 0; i <= n; i++)
+            *(cipherText + n) = &p[n];
+            for (int i = 0; i <= 25; i++)
             {
-
-                if (argv[1][i] == argv[1][n])
-                {
+                // if (*cipherText[i] == argv[1][n])
+                // {
                     // printf("Usage: 26 Unique Alphabet\n");
-                    printf("value: %c\n", argv[1][n]);
-
-                }
-            }
-            if (argv[1][26] == '\0')
-            {
-                cipherText[n] = argv[1][n];
-            }
-            else {
-                printf("Usage: ./substitution key should be 26 character\n");
-                return 1;
+                    printf("value: %c, %c\n", argv[1][n], *cipherText[i]);
+                    // return 1;
+                // }
             }
             n++;
         }
@@ -42,6 +39,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %p == %p\n", cipherText, &argv[1][1]);
+    printf("value: %s\n", *cipherText);
     return 0;
 }
