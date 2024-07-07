@@ -17,10 +17,13 @@ int main(int argc, char *argv[])
             }
             for(int i = 0; i <= n; i++)
             {
-                // if (argv[1][n] ==  cipherText[i]) {
+
+                if (argv[1][i] == argv[1][n])
+                {
+                    // printf("Usage: 26 Unique Alphabet\n");
                     printf("value: %c\n", argv[1][n]);
-                    printf("value: %s\n", cipherText[i]);
-                // }
+
+                }
             }
             if (argv[1][26] == '\0')
             {
