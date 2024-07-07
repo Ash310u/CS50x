@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-    char *cipherText[26];
+    char *cipherText;
     if (argc == 2)
     {
         int n = 0;
@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
             }
             if (argv[1][26] == '\0')
             {
-                cipherText[0] = &argv[1][0];
-            }
-            else {
                 printf("Usage: ./substitution key should be 26 character\n");
                 return 1;
+            }
+            else {
+                cipherText[n] = argv[1][n];
             }
             n++;
         }
@@ -42,6 +42,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %s\n", *cipherText);
+    printf("value: %s\n", cipherText);
     return 0;
 }
