@@ -21,14 +21,16 @@ int main(int argc, char *argv[])
                 return 1;
             }
             cipherText[n] = &argv[1][n];
-            for(int i = 0; i <= n; i++)
-            {
-                // if (argv[1][n] == )
-            }
-                printf("value: %s\n", &argv[1][n]);
+            // for(int i = 0; i <= n; i++)
+            // {
+            //     if (&argv[1][n] ==  cipherText[i]) {
+            //         printf("value: %s == %s\n", cipherText[i], &argv[1][n]);
+            //     }
+            // }
             n++;
         }
         while (n <= 25);
+            printf("value: %p == %p\n", cipherText[0], &argv[1][0]);
     }
     else
     {
