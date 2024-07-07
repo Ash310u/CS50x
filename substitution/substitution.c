@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
             *(cipherText + n) = &p[n];
             for (int i = 0; i <= n; i++)
             {
-                if (argv[1][n] == *cipherText[i])
+                if (argv[1][i] == *cipherText[n])
                 {
                     printf("Usage: 26 Unique Alphabet\n");
                     printf("value: %c, %c\n", argv[1][n], *cipherText[i]);
