@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
                 return 1;
             }
             *(cipherText + n) = &p[n];
-            for (int i = 0; i <= 25; i++)
+            for (int i = 0; i <= n; i++)
             {
-                // if (*cipherText[i] == argv[1][n])
-                // {
-                    // printf("Usage: 26 Unique Alphabet\n");
+                if (argv[1][n] == *cipherText[i])
+                {
+                    printf("Usage: 26 Unique Alphabet\n");
                     printf("value: %c, %c\n", argv[1][n], *cipherText[i]);
-                    // return 1;
-                // }
+                    return 1;
+                }
             }
             n++;
         }
