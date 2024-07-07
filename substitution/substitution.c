@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
         if (argv[1][26] != '\0')
         {
             printf("Usage: ./substitution key should be 26 character\n");
+            return 1;
         }
         do
         {
@@ -23,10 +24,6 @@ int main(int argc, char *argv[])
             n++;
         }
         while (n <= 25);
-        // if (argv[1][25] == '\0')
-        // {
-            // cipherText = argv[1];
-        // }
     }
     else
     {
