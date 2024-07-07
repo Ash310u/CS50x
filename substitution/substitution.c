@@ -7,11 +7,6 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         int n = 0;
-        if (argv[1][26] != '\0')
-        {
-            printf("Usage: ./substitution key should be 26 character\n");
-            return 1;
-        }
         do
         {
 
@@ -20,7 +15,14 @@ int main(int argc, char *argv[])
                 printf("Usage: ./substitution key should be Alphabet \n");
                 return 1;
             }
-            cipherText[n] = &argv[1][n];
+            if (argv[1][26] == '\0')
+            {
+                cipherText[0] = &argv[1][0];
+            }
+            else {
+                printf("Usage: ./substitution key should be 26 character\n");
+                return 1;
+            }
             // for(int i = 0; i <= n; i++)
             // {
             //     if (&argv[1][n] ==  cipherText[i]) {
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
             n++;
         }
         while (n <= 25);
-            printf("value: %p == %p\n", cipherText[0], &argv[1][0]);
+        printf("value: %p == %p\n", cipherText[0], &argv[1][0]);
     }
     else
     {
