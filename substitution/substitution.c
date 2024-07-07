@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
         int n = 0;
         do
         {
-
             if (isalpha((unsigned char) argv[1][n]) == 0)
             {
                 printf("Usage: ./substitution key should be Alphabet \n");
@@ -31,7 +30,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
             else {
-                cipherText[n] = argv[1][n];
+                cipherText[n] = *argv[1][n];
             }
             n++;
         }
