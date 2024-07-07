@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %p == %p\n", cipherText, &argv[1][0]);
+    printf("value: %p == %p\n", *cipherText[0], *argv[1][0]);
     return 0;
 }
