@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
                 printf("Usage: ./substitution key should be Alphabet \n");
                 return 1;
             }
-            *(cipherText + n) = &argv[1][n];
+            // *(cipherText + n) = &argv[1][n];
             n++;
         }
         while (n <= 25);
