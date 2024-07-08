@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <ctype.h>
+#include <string.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[])
@@ -47,7 +48,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i <= 25; i++)
     {
-        for (int n = 0; n <= 25; n++)
+        for (int n = 0, length = strlen(plainText); n <= length; n++)
         {
             if (tolower(plainText[i]) == tolower(*alphabetArr[n]))
             {
