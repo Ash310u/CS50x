@@ -59,11 +59,11 @@ int main(int argc, char *argv[])
                 {
                     printf("%c", tolower(*cipherText[n]));
                 }
+                else
+                {
+                    printf("%c", plainText[i]);
+                }
             }
-        }
-        if (plainText[i] < 65 && plainText[i] > 90)
-        {
-            printf("%c", plainText[i]);
         }
     }
     printf("\n");
