@@ -6,6 +6,7 @@
 int main(int argc, char *argv[])
 {
     char *p = &argv[1][0];
+    char x = *p;
     char *substitution[26];
     if (argc == 2)
     {
