@@ -51,9 +51,10 @@ int main(int argc, char *argv[])
         {
             if (tolower(plainText[i]) == tolower(*alphabetArr[n]))
             {
-                printf("value: %c == %c\n", plainText[i], *cipherText[n]);
+                printf("%c", *cipherText[n]);
             }
         }
     }
+    printf("\n");
     return 0;
 }
