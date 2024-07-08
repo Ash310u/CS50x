@@ -38,7 +38,6 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    ]=-0983 dfg hm,.
     printf("value: %s\n", *cipherText);
     return 0;
 }
