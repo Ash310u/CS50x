@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
             *(cipherText + n) = &p[n];
-            for (int i = n+1; i <= n+1; i++)
+            for (int i = n + 1; i <= n + 1; i++)
             {
                 if (tolower(*cipherText[n]) == tolower(argv[1][i]))
                 {
@@ -38,6 +38,13 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    printf("value: %s\n", *cipherText);
+
+    for (int i = 0; i <= 25; i++)
+    {
+        if (tolower(*cipherText[n]) == tolower(argv[1][i]))
+        {
+            printf("value: %s\n", *cipherText);
+        }
+    }
     return 0;
 }
