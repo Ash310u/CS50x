@@ -61,12 +61,12 @@ int main(int argc, char *argv[])
                 }
             }
         }
-        // if (plainText[i] < 65 || plainText[i] > 90)
-        // {
-        // }
+        if (plainText[i] < 65 || plainText[i] > 90)
+        {
+            printf("check = %c\n", tolower(plainText[i]));
+        }
     }
     printf("\n");
-            printf("check = %c\n", tolower(plainText[4]));
     return 0;
 }
 //  || (plainText[i] >= 97 && plainText[i] <= 122))
