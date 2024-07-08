@@ -67,6 +67,6 @@ int main(int argc, char *argv[])
             printf("%c", plainText[i]);
         }
     }
-    printf("\n");
+    printf(" \n");
     return 0;
 }
