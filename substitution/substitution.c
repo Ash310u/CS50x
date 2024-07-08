@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
                 }
             }
         }
-        if (plainText[i] < 65 && plainText[i] > 90 && plainText[i] < 97 && plainText[i] > 122)
+        if (plainText[i] < 65 && plainText[i] > 90)
         {
             printf("%c", plainText[i]);
         }
