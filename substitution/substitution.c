@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[])
@@ -39,10 +39,17 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    char *plainTextArr[26] = {};
+
+    char *plainTextArr[26] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+                              "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
     char *plainText = get_string("plaintext: ");
+
     for (int i = 0; i <= 25; i++)
     {
+        if(*plainTextArr[i])
+        {
+
+        }
         printf("value: %c == %c\n", plainText[i], *cipherText[i]);
     }
     return 0;
