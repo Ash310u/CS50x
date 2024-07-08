@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     char *plainText = get_string("plaintext: ");
+    char *plainText = get_string("plaintext: ");
     for (int i = 0; i <= 25; i++)
     {
         printf("value: %c == %c\n", plainText[i], *cipherText[i]);
