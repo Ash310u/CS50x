@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         {
             if (isalpha((unsigned char) argv[1][n]) == 0)
             {
-                printf("Usage: ./substitution key should be Alphabet \n");
+                printf("Key must only containing alphabetic characters. \n");
                 return 1;
             }
             *(substitution + n) = &p[n];
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
             {
                 if (tolower(*substitution[n]) == tolower(argv[1][i]))
                 {
-                    printf("Usage: 26 Unique Alphabet\n");
+                    printf("Key must not contain repeated character.\n");
                     return 1;
                 }
             }
