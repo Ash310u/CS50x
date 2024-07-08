@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <ctype.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
     char *plainText = get_string("plaintext: ");
 
-    for (int i = 0, length = strlen(plainText) - 1 ; i <= length; i++)
+    for (int i = 0, length = strlen(plainText) - 1; i <= length; i++)
     {
         for (int n = 0; n <= 25; n++)
         {
@@ -62,9 +62,9 @@ int main(int argc, char *argv[])
                 }
             }
         }
-        if ((plainText[i] < 65 || plainText[i] > 90) && (plainText[i] > 97 || plainText[i] > 122))
+        if ((plainText[i] < 65 || plainText[i] > 90) && (plainText[i] < 97 || plainText[i] > 122))
         {
-            printf("%c\n", plainText[i]);
+            printf("%c", plainText[i]);
         }
     }
     printf("\n");
