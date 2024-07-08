@@ -41,15 +41,18 @@ int main(int argc, char *argv[])
     }
 
     char *alphabetArr[26] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-                              "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+                             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
     char *plainText = get_string("plaintext: ");
 
     for (int i = 0; i <= 25; i++)
     {
-        if(tolower(*alphabetArr[i]) == tolower(argv))
+        for (int n = 0; n <= 25; n++)
         {
-            printf("value: %c == %c == %c\n", plainText[i], *cipherText[i], *alphabetArr[i]);
+            if (tolower(plainText[i]) == tolower(*alphabetArr[n]))
+            {
+                printf("value: %c == %c\n", plainText[i], *cipherText[n]);
+            }
         }
     }
     return 0;
