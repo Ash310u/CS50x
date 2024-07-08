@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
             // printf("%c", plainText[i]);
             *(cipherText + i) = plainText[i];
         }
-        printf("ciphertext: %s", ]);
+        printf("ciphertext: %c", *(cipherText + i));
     }
     printf("\n");
     return 0;
