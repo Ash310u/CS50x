@@ -40,16 +40,16 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char *plainTextArr[26] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+    char *alphabetArr[26] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                               "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
     char *plainText = get_string("plaintext: ");
 
     for (int i = 0; i <= 25; i++)
     {
-        if(*plainTextArr[i])
+        if(*alphabetArr[i])
         {
-            printf("value: %c == %c == %c\n", plainText[i], *cipherText[i], *plainTextArr[i]);
+            printf("value: %c == %c == %c\n", plainText[i], *cipherText[i], *alphabetArr[i]);
         }
     }
     return 0;
