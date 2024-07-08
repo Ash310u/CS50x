@@ -1,5 +1,6 @@
 #include <ctype.h>
 #include <stdio.h>
+#include <stdio.h>
 
 int main(int argc, char *argv[])
 {
@@ -41,10 +42,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i <= 25; i++)
     {
-        if (tolower(*cipherText[n]) == tolower(argv[1][i]))
-        {
-            printf("value: %s\n", *cipherText);
-        }
+        printf("value: %c\n", *cipherText[i]);
     }
     return 0;
 }
