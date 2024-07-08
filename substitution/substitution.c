@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    char *plainText = get_string("plaintext: ");
+    char *plainTextArr[26] = {};
     char *plainText = get_string("plaintext: ");
     for (int i = 0; i <= 25; i++)
     {
