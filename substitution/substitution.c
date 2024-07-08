@@ -51,8 +51,19 @@ int main(int argc, char *argv[])
         {
             if (tolower(plainText[i]) == tolower(*alphabetArr[n]))
             {
-                printf("%c", *cipherText[n]);
+                if (plainText[i] >= 65 && plainText[i] <= 90)
+                {
+                    printf("%c", toupper(*cipherText[n]));
+                }
+                else if (plainText[i] >= 97 && plainText[i] <= 122)
+                {
+                    printf("%c", tolower(*cipherText[n]));
+                }
             }
+        }
+        if (plainText[i] < 65 && plainText[i] > 90 && plainText[i] < 97 && plainText[i] > 122)
+        {
+            printf("%c", plainText[i]);
         }
     }
     printf("\n");
