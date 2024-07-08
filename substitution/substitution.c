@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i <= 25; i++)
     {
-        if(*alphabetArr[i])
+        if(tolower(*alphabetArr[i]) == tolower(argv))
         {
             printf("value: %c == %c == %c\n", plainText[i], *cipherText[i], *alphabetArr[i]);
         }
