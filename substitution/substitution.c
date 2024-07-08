@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
 
     char *plainText = get_string("plaintext: ");
     // char *x = &plainText[0];
-    char *cipherText;
+    // char *cipherText;
+    printf("ciphertext: ");
     for (int i = 0, length = strlen(plainText) - 1; i <= length; i++)
     {
         for (int n = 0; n <= 25; n++)
@@ -56,21 +57,20 @@ int main(int argc, char *argv[])
                 if (plainText[i] >= 65 && plainText[i] <= 90)
                 {
                     printf("%c", toupper(*substitution[n]));
-                    *(cipherText + i) = toupper(*substitution[n]);
+                    // *(cipherText + i) = toupper(*substitution[n]);
                 }
                 else if (plainText[i] >= 97 && plainText[i] <= 122)
                 {
                     printf("%c", tolower(*substitution[n]));
-                     *(cipherText + i)  = tolower(*substitution[n]);
+                    //  *(cipherText + i)  = tolower(*substitution[n]);
                 }
             }
         }
         if ((plainText[i] < 65 || plainText[i] > 90) && (plainText[i] < 97 || plainText[i] > 122))
         {
             printf("%c", plainText[i]);
-            *(cipherText + i) = plainText[i];
+            // *(cipherText + i) = plainText[i];
         }
-        printf("ciphertext: %c", *(cipherText + i));
     }
     printf("\n");
     return 0;
