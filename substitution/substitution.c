@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         int n = 0;
         if (argv[1][26] != '\0')
         {
-            printf("Usage: ./substitution key should be 26 character\n");
+            printf("Key must contain 26 characters.\n");
             return 1;
         }
         do
@@ -70,4 +70,3 @@ int main(int argc, char *argv[])
     printf("\n");
     return 0;
 }
-//  || (plainText[i] >= 97 && plainText[i] <= 122))
