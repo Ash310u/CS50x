@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
+
+How do you know?: The sort1 algorithm sorts random50000.txt with O(n^2) in 5+ seconds & its sorts sorted file in just Omega(n)
+
+sort2 uses: Merge sort
 
 How do you know?: TODO
 
-sort2 uses: TODO
-
-How do you know?: TODO
-
-sort3 uses: TODO
+sort3 uses: Selection sort
 
 How do you know?: TODO
