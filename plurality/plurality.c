@@ -97,13 +97,12 @@ void print_winner(void)
                 multiWinnerIndex[n] = n;
             }
         }
-        printf("%i\n",strlen(multiWinnerIndex));
-        // if(strlen(multiWinnerIndex) > 1)
-        // {
-            // printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
-        // } else {
-        //     printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
-        // }
+        if(multiWinnerIndex[i] != 'null')
+        {
+            printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
+        } else {
+            printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
+        }
     }
     return;
 }
