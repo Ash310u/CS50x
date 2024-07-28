@@ -56,9 +56,10 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
-        printf("%i\n", candidates[i].votes);
     }
 
+    printf("%i\n", candidates[0].votes);
+    printf("%i\n", candidates[1].votes);
     // Display winner of election
     print_winner();
 }
@@ -66,12 +67,14 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for(int n = 0; n < candidate_count; n++)
+    for (int n = 0; n < candidate_count; n++)
     {
-        if (strcmp(candidates[n].name, name) == )
+        if (strcmp(candidates[n].name, name) == 0)
         {
-            candidates[n].votes = candidates[n].votes + 1 ;
-        } else {
+            candidates[n].votes = candidates[n].votes + 1;
+        }
+        else
+        {
             return 1;
         }
     }
@@ -81,6 +84,14 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-
+    candidate winner;
+    for (int n = 0; n < candidate_count; n++)
+    {
+        if (candidates[n].votes > candidates[n+1].votes )
+        {
+            winner = candidates[n];
+        }
+    }
+    
     return;
 }
