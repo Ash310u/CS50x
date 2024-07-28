@@ -84,10 +84,10 @@ void print_winner(void)
     {
         for (int n = 1; n <= i + 1; n++)
         {
-            if(candidates[i].votes > candidates[n].votes)
+            if (candidates[i].votes < candidates[n].votes)
             {
                 winnerIndex = i;
-            } else if (candidates[i].votes < candidates[n].votes)
+            } else if(candidates[i].votes > candidates[n].votes)
             {
                 winnerIndex = n;
             } else if (candidates[i].votes == candidates[n].votes)
