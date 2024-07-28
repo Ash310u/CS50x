@@ -80,7 +80,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int winnerIndex;
-    int multiWinnerIndex[candidate_count];
+    char multiWinnerIndex[candidate_count];
     for (int i = 0; i < candidate_count; i++)
     {
         for (int n = 1; n <= i + 1; n++)
@@ -97,12 +97,13 @@ void print_winner(void)
                 multiWinnerIndex[n] = n;
             }
         }
-        if(strlen(multiWinnerIndex) > 1)
-        {
-            printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
-        } else {
-            printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
-        }
+        printf("%lu\n",strlen(multiWinnerIndex));
+        // if(strlen(multiWinnerIndex) > 1)
+        // {
+            // printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
+        // } else {
+        //     printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
+        // }
     }
     return;
 }
