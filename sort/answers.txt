@@ -1,10 +1,10 @@
 sort1 uses: Bubble sort
 
-How do you know?: The sort1 algorithm sorts random50000.txt with O(n^2) in 5+ seconds & its sorts sorted file in just Omega(n)
+How do you know?: The sort1 algorithm sorts random50000.txt & reversed50000.txt with O(n^2) in 5+ seconds & its sorts the sorted50000.txt file with Omega(n) under 0.7 seconds
 
 sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: This sort2
 
 sort3 uses: Selection sort
 
