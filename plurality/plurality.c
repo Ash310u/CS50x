@@ -94,9 +94,10 @@ void print_winner(void)
                 printf("%s\n", candidates[n].name);
             } else if (candidates[i].votes == candidates[n].votes)
             {
-                printf("%s\n", candidates[i].name);
-                printf("%s\n", candidates[n].name);
+                // printf("%s\n", candidates[i].name);
+                // printf("%s\n", candidates[n].name);
             }
+            printf("%s : %i\n", candidates[i].name, candidates[i].votes);
         }
     }
     return;
