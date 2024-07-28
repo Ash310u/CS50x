@@ -58,8 +58,6 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%i\n", candidates[0].votes);
-    printf("%i\n", candidates[1].votes);
     // Display winner of election
     print_winner();
 }
@@ -84,10 +82,10 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    candidate winner = candidates[0];
     for (int n = 0; n < candidate_count; n++)
     {
-        if (winner.votes < candidates[n].votes )
+        candidate winner = candidates[n];
+        if (winner.votes < candidates[n+1].votes )
         {
             winner = candidates[n];
             printf("%s\n", winner.name);
