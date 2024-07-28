@@ -97,8 +97,12 @@ void print_winner(void)
                 multiWinnerIndex[n] = n;
             }
         }
-        printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
+        if(strlen(multiWinnerIndex) > 1)
+        {
+            printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
+        } else {
+            printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
+        }
     }
-    // printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
     return;
 }
