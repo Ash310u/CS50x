@@ -97,6 +97,6 @@ void print_winner(void)
             }
         }
     }
-    printf("%s : %i\n", candidates[winnerIndex].name, candidates[winnerIndex].votes);
+    printf("%i\n", winnerIndex);
     return;
 }
