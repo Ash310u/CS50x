@@ -95,7 +95,7 @@ void print_winner(void)
             } else if (candidates[i].votes == candidates[n].votes)
             {
                 winnerIndex = i;
-                printf("%s : %i\n", candidates[n].name, candidates[n].votes);
+                printf("equal: %s : %i\n", candidates[n].name, candidates[n].votes);
             }
         }
     }
