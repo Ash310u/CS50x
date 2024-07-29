@@ -80,28 +80,26 @@ bool vote(string name)
 void print_winner(void)
 {
     int winnerIndex;
-    int multiWinnerIndex[candidate_count];
     for (int i = 0; i < candidate_count; i++)
     {
         for (int n = 1; n <= i + 1; n++)
         {
-            if (candidates[i].votes < candidates[n].votes)
+            if (candidates[i].votes <= candidates[n].votes)
             {
                 winnerIndex = i;
-            } else if(candidates[i].votes > candidates[n].votes)
+                printf("%s : %i\n", candidates[winnerIndex].name, candidates[winnerIndex ].votes);
+            } else if(candidates[i].votes >= candidates[n].votes)
             {
                 winnerIndex = n;
-            } else if (candidates[i].votes == candidates[n].votes)
-            {
-                multiWinnerIndex[i] = i;
-                multiWinnerIndex[n] = n;
+                printf("%s : %i\n", candidates[winnerIndex].name, candidates[winnerIndex].votes);
             }
-        }
-        if(multiWinnerIndex[i] != 'null')
-        {
-            printf("%s : %i\n", candidates[multiWinnerIndex[i]].name, candidates[multiWinnerIndex[i]].votes);
-        } else {
-            printf("%s : %i\n", candidates[winnerIndex - 1].name, candidates[winnerIndex - 1].votes);
+            //  else if (candidates[i].votes == candidates[n].votes)
+            // {
+            //     winnerIndex = i;
+            //     printf("%s : %i\n", candidates[winnerIndex].name, candidates[winnerIndex].votes);
+            //     winnerIndex = n;
+            //     printf("%s : %i\n", candidates[winnerIndex].name, candidates[winnerIndex].votes);
+            // }
         }
     }
     return;
