@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
         {
             candidates[i].votes++;
             preferences[voter][rank] = candidates[i].votes;
-            printf("%i\n", preferences[voter][rank]);
+            // printf("%i\n", preferences[voter][rank]);
             return true;
         }
     }
