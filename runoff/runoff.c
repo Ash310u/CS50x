@@ -195,15 +195,10 @@ bool is_tie(int min)
         if (candidates[i].votes != min)
         {
             isSame = false
-        } else {
-            isSame = true
+            break;
         }
     }
-
-    if(isSame) {
-        return true;
-    }
-    return false;
+    return isSame;
 }
 
 // Eliminate the candidate (or candidates) in last place
