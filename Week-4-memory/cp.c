@@ -18,34 +18,34 @@ int main(int argc, char *argv[])
     fclose(src);
     fclose(dst);
 
-    FILE *file = fopen(argv[1], "rb");
-    if (!file)
-    {
-        perror("File opening failed");
-        return 1;
-    }
+    // FILE *file = fopen(argv[1], "rb");
+    // if (!file)
+    // {
+    //     perror("File opening failed");
+    //     return 1;
+    // }
 
-    size_t result;
-    int buffer[10];
+    // size_t result;
+    // int buffer[10];
 
-    result = fread(buffer, sizeof(int), 10, file);
-    if (result != 10)
-    {
-        if (feof(file))
-        {
-            printf("End of file reached.\n");
-        }
-        else if (ferror(file))
-        {
-            perror("Error reading from file");
-        }
-    }
-    else
-    {
-        printf("result: %zu\n", result);
-        printf("Successfully read 10 integers.\n");
-    }
+    // result = fread(buffer, sizeof(int), 10, file);
+    // if (result != 10)
+    // {
+    //     if (feof(file))
+    //     {
+    //         printf("End of file reached.\n");
+    //     }
+    //     else if (ferror(file))
+    //     {
+    //         perror("Error reading from file");
+    //     }
+    // }
+    // else
+    // {
+    //     printf("result: %zu\n", result);
+    //     printf("Successfully read 10 integers.\n");
+    // }
 
-    fclose(file);
-    return 0;
+    // fclose(file);
+    // return 0;
 }
