@@ -29,7 +29,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             image[n][i].rgbtBlue = avg;
             image[n][i].rgbtGreen = avg;
-            image[n][i].rgbtRed = avg;
+            image[n][i].rgbtRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue;
         }
     }
     return;
