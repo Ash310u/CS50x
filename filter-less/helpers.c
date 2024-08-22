@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <math.h>
+#include <std.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -69,6 +70,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int i = 0; i < width; i++)
         {
+            printf("%i\n", image[n][i].rgbtRed)
             int swapRed = image[n][i].rgbtRed;
             int swapGreen = image[n][i].rgbtGreen;
             int swapBlue = image[n][i].rgbtBlue;
