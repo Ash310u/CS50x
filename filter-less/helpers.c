@@ -71,9 +71,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             if(width % 2 == 0)
             {
-                image[n][width/2].rgbtRed;
-                image[n][width/2].rgbtGreen;
-                image[n][width/2].rgbtBlue;
+                image[n][width/2].rgbtRed = image[n][width/2].rgbtRed;
+                image[n][width/2].rgbtGreen = image[n][width/2].rgbtGreen;
+                image[n][width/2].rgbtBlue = image[n][width/2].rgbtBlue;
             }
             int swapRed = image[n][width - i].rgbtRed;
             int swapGreen = image[n][width - i].rgbtGreen;
