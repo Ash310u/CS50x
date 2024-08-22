@@ -70,6 +70,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int i = 0; i < width; i++)
         {
 
+            int swapRed = image[n][i].rgbtRed;
+            int swapGreen = image[n][i].rgbtGreen;
+            int swapBlue = image[n][i].rgbtBlue;
+
             image[n][i].rgbtRed = image[n][width - i].rgbtRed ;
             image[n][i].rgbtGreen = image[n][width - i].rgbtGreen;
             image[n][i].rgbtBlue = image[n][width - i].rgbtBlue;
