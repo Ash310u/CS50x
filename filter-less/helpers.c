@@ -71,8 +71,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
 
             image[n][i].rgbtRed = image[n][width - i].rgbtRed ;
-            image[n][i].rgbtGreen = avg;
-            image[n][i].rgbtBlue = avg;
+            image[n][i].rgbtGreen = image[n][width - i].rgbtGreen;
+            image[n][i].rgbtBlue = image[n][width - i].rgbtBlue;
         }
     }
     return;
