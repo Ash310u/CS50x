@@ -74,13 +74,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             int swapGreen = image[n][i].rgbtGreen;
             int swapBlue = image[n][i].rgbtBlue;
 
-            image[n][i].rgbtRed = image[n][width - i].rgbtRed;
-            image[n][i].rgbtGreen = image[n][width - i].rgbtGreen;
-            image[n][i].rgbtBlue = image[n][width - i].rgbtBlue;
+            image[n][i].rgbtRed = image[n][width - 1 - i].rgbtRed;
+            image[n][i].rgbtGreen = image[n][width - 1 - i].rgbtGreen;
+            image[n][i].rgbtBlue = image[n][width - 1 - i].rgbtBlue;
 
-            image[n][width - i].rgbtRed = swapRed;
-            image[n][width - i].rgbtGreen = swapGreen;
-            image[n][width - i].rgbtBlue = swapBlue;
+            image[n][width - 1 - i].rgbtRed = swapRed;
+            image[n][width - 1 - i].rgbtGreen = swapGreen;
+            image[n][width - 1 - i].rgbtBlue = swapBlue;
         }
     }
     return;
