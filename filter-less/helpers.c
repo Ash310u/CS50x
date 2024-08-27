@@ -105,10 +105,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             sidePixel2[i][j] = image[i][j-1];
             sidePixel3[i][j] = image[i+1][j-1];
             sidePixel4[i][j] = image[i-1][j];
-            sidePixel5[i][j] = image[i][j];
-            sidePixel6[i][j] = image[i][j];
-            sidePixel7[i][j] = image[i][j];
-            sidePixel8[i][j] = image[i][j];
+            sidePixel6[i][j] = image[i+1][j];
+            sidePixel7[i][j] = image[i-1][j+1];
+            sidePixel8[i][j] = image[i][j+1];
+            sidePixel8[i][j] = image[i+1][j+1];
 
             for (int j = 0; j < 3; j++)
             {
