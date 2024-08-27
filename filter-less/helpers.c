@@ -95,28 +95,28 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
     for (int n = 0; n < height; n++)
     {
         for (int i = 0; i < width; i++)
         {
             copy[i][j] = image[i][j];
 
-            sidePixel1[i-1][j-1] = image[i-1][j-1];
-            sidePixel2[i][j] = image[i][j-1];
-            sidePixel3[i][j] = image[i+1][j-1];
-            sidePixel4[i][j] = image[i-1][j];
-            sidePixel6[i][j] = image[i+1][j];
-            sidePixel7[i][j] = image[i-1][j+1];
-            sidePixel8[i][j] = image[i][j+1];
-            sidePixel8[i][j] = image[i+1][j+1];
+            int avg = Math.round((copy[i][j] + image[i - 1][j - 1] + image[i][j - 1] +
+                                  image[i + 1][j - 1] + image[i - 1][j] + image[i + 1][j] +
+                                  image[i - 1][j + 1] + image[i][j + 1] + image[i + 1][j + 1]) /
+                                 9);
+            // sidePixel2[i][j] = image[i][j - 1];
+            // sidePixel3[i][j] = image[i + 1][j - 1];
+            // sidePixel4[i][j] = image[i - 1][j];
+            // sidePixel6[i][j] = image[i + 1][j];
+            // sidePixel7[i][j] = image[i - 1][j + 1];
+            // sidePixel8[i][j] = image[i][j + 1];
+            // sidePixel8[i][j] = image[i + 1][j + 1];
 
-            for (int j = 0; j < 3; j++)
-            {
-                int avg = round((image[j][i].rgbtBlue + image[n][i].rgbtGreen + image[n][i].rgbtRed) / 3.0);
-                image[n][i].rgbtRed = image[n][i].rgbtGreen;
-                image[n][i].rgbtGreen = image[n][i].rgbtBlue;
-                image[n][i].rgbtBlue = image[n][i].rgbtRed;
-            }
+            image[n][i].rgbtRed = avg;
+            image[n][i].rgbtGreen = avg;
+            image[n][i].rgbtBlue = avg;
         }
     }
     return;
