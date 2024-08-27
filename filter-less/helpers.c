@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[i][j] = image[i][j];
 
-            sidePixel1[i][j] = image[i][j];
+            sidePixel1[i-1][j-1] = image];
             sidePixel2[i][j] = image[i][j];
             sidePixel3[i][j] = image[i][j];
             sidePixel4[i][j] = image[i][j];
@@ -109,7 +109,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             sidePixel6[i][j] = image[i][j];
             sidePixel7[i][j] = image[i][j];
             sidePixel8[i][j] = image[i][j];
-            
+
             for (int j = 0; j < 3; j++)
             {
                 int avg = round((image[j][i].rgbtBlue + image[n][i].rgbtGreen + image[n][i].rgbtRed) / 3.0);
