@@ -99,62 +99,69 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int avgRed = 0, avgGreen = 0, avgBlue = 0;
+            int red = 0, green = 0, blue = 0;
             int counter = 0;
 
-            if(i - 1 >= 0 && j - 1 >= 0)
+            if (i - 1 >= 0 && j - 1 >= 0)
             {
-                avgRed =+ image[i - 1][j - 1].rgbtRed;
-                avgGreen =+ image[i - 1][j - 1].rgbtGreen;
-                avgBlue =+ image[i - 1][j - 1].rgbtBlue;
+                red = +image[i - 1][j - 1].rgbtRed;
+                green = +image[i - 1][j - 1].rgbtGreen;
+                blue = +image[i - 1][j - 1].rgbtBlue;
                 counter++;
             }
-            if(i - 1 >= 0)
+            if (i - 1 >= 0)
             {
-                avgRed =+ image[i - 1][j].rgbtRed;
-                avgGreen =+ image[i - 1][j].rgbtGreen;
-                avgBlue =+ image[i - 1][j].rgbtBlue;
+                red = +image[i - 1][j].rgbtRed;
+                green = +image[i - 1][j].rgbtGreen;
+                blue = +image[i - 1][j].rgbtBlue;
                 counter++;
             }
-            if(i - 1 >= 0 && j + 1 < width)
+            if (i - 1 >= 0 && j + 1 < width)
             {
-                avgRed =+ image[i - 1][j + 1].rgbtRed;
-                avgGreen =+ image[i - 1][j + 1].rgbtGreen;
-                avgBlue =+ image[i - 1][j + 1].rgbtBlue;
+                red = +image[i - 1][j + 1].rgbtRed;
+                green = +image[i - 1][j + 1].rgbtGreen;
+                blue = +image[i - 1][j + 1].rgbtBlue;
                 counter++;
             }
-            if(j - 1 >= 0)
+            if (j - 1 >= 0)
             {
-                avgRed =+ image[i][j - 1].rgbtRed;
-                avgGreen =+ image[i][j - 1].rgbtGreen;
-                avgBlue =+ image[i][j - 1].rgbtBlue;
+                red = +image[i][j - 1].rgbtRed;
+                green = +image[i][j - 1].rgbtGreen;
+                blue = +image[i][j - 1].rgbtBlue;
                 counter++;
             }
-            if(j + 1 < width)
+            if (j + 1 < width)
             {
-                avgRed =+ image[i][j + 1].rgbtRed;
-                avgGreen =+ image[i][j + 1].rgbtGreen;
-                avgBlue =+ image[i][j + 1].rgbtBlue;
+                red = +image[i][j + 1].rgbtRed;
+                green = +image[i][j + 1].rgbtGreen;
+                blue = +image[i][j + 1].rgbtBlue;
                 counter++;
             }
-            if(i + 1 < height && j - 1 >= 0 )
+            if (i + 1 < height)
             {
-                avgRed =+ image[i + 1][j - 1].rgbtRed;
-                avgGreen =+ image[i + 1][j - 1].rgbtGreen;
-                avgBlue =+ image[i + 1][j - 1].rgbtBlue;
+                red = +image[i + 1][j].rgbtRed;
+                green = +image[i + 1][j].rgbtGreen;
+                blue = +image[i + 1][j].rgbtBlue;
                 counter++;
             }
-            if(i + 1 < height && j + 1 < width)
+            if (i + 1 < height && j - 1 >= 0)
             {
-                avgRed =+ image[i + 1][j + 1].rgbtRed;
-                avgGreen =+ image[i + 1][j + 1].rgbtGreen;
-                avgBlue =+ image[i + 1][j + 1].rgbtBlue;
+                red = +image[i + 1][j - 1].rgbtRed;
+                green = +image[i + 1][j - 1].rgbtGreen;
+                blue = +image[i + 1][j - 1].rgbtBlue;
+                counter++;
+            }
+            if (i + 1 < height && j + 1 < width)
+            {
+                red = +image[i + 1][j + 1].rgbtRed;
+                green = +image[i + 1][j + 1].rgbtGreen;
+                blue = +image[i + 1][j + 1].rgbtBlue;
                 counter++;
             }
 
-            image[i][j].rgbtRed = avgRed;
-            image[i][j].rgbtGreen = avgGreen;
-            image[i][j].rgbtBlue = avgBlue;
+            image[i][j].rgbtRed = red / counter;
+            image[i][j].rgbtGreen = green / counter;
+            image[i][j].rgbtBlue = blue / counter;
         }
     }
     return;
