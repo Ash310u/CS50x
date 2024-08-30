@@ -111,23 +111,46 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             if(i - 1 >= 0)
             {
-                avgRed =+ image[i - 1][j - 1].rgbtRed
-                avgGreen =+ image[i - 1][j - 1].rgbtGreen
-                avgBlue =+ image[i - 1][j - 1].rgbtBlue
+                avgRed =+ image[i - 1][j].rgbtRed;
+                avgGreen =+ image[i - 1][j].rgbtGreen;
+                avgBlue =+ image[i - 1][j].rgbtBlue;
+                counter++;
             }
-            if(i - 1 >= 0 && j - 1 >= 0)
+            if(i - 1 >= 0 && j + 1 < width)
             {
-                avgRed =+ image[i - 1][j - 1].rgbtRed
-                avgGreen =+ image[i - 1][j - 1].rgbtGreen
-                avgBlue =+ image[i - 1][j - 1].rgbtBlue
+                avgRed =+ image[i - 1][j + 1].rgbtRed;
+                avgGreen =+ image[i - 1][j + 1].rgbtGreen;
+                avgBlue =+ image[i - 1][j + 1].rgbtBlue;
+                counter++;
             }
-            // sidePixel2[i][j] = image[i][j - 1];
-            // sidePixel3[i][j] = image[i + 1][j - 1];
-            // sidePixel4[i][j] = image[i - 1][j];
-            // sidePixel6[i][j] = image[i + 1][j];
-            // sidePixel7[i][j] = image[i - 1][j + 1];
-            // sidePixel8[i][j] = image[i][j + 1];
-            // sidePixel8[i][j] = image[i + 1][j + 1];
+            if(j - 1 >= 0)
+            {
+                avgRed =+ image[i][j - 1].rgbtRed;
+                avgGreen =+ image[i][j - 1].rgbtGreen;
+                avgBlue =+ image[i][j - 1].rgbtBlue;
+                counter++;
+            }
+            if(j + 1 < width)
+            {
+                avgRed =+ image[i][j + 1].rgbtRed;
+                avgGreen =+ image[i][j + 1].rgbtGreen;
+                avgBlue =+ image[i][j + 1].rgbtBlue;
+                counter++;
+            }
+            if(i + 1 < height && j - 1 >= 0 )
+            {
+                avgRed =+ image[i + 1][j - 1].rgbtRed;
+                avgGreen =+ image[i + 1][j - 1].rgbtGreen;
+                avgBlue =+ image[i + 1][j - 1].rgbtBlue;
+                counter++;
+            }
+            if(i + 1 < height && j + 1 < width)
+            {
+                avgRed =+ image[i + 1][j + 1].rgbtRed;
+                avgGreen =+ image[i + 1][j + 1].rgbtGreen;
+                avgBlue =+ image[i + 1][j + 1].rgbtBlue;
+                counter++;
+            }
 
             image[i][j].rgbtRed = avgRed;
             image[i][j].rgbtGreen = avgGreen;
