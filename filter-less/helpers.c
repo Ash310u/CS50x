@@ -102,7 +102,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avgRed = 0, avgGreen = 0, avgBlue = 0;
             int counter = 0;
 
-            if(i - 1 )
+            if(i - 1 > height)
             // sidePixel2[i][j] = image[i][j - 1];
             // sidePixel3[i][j] = image[i + 1][j - 1];
             // sidePixel4[i][j] = image[i - 1][j];
