@@ -107,62 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             blue += image[i][j].rgbtBlue;
             counter++;
 
-            if (i - 1 >= 0 && j - 1 >= 0)
-            {
-                red += image[i - 1][j - 1].rgbtRed;
-                green += image[i - 1][j - 1].rgbtGreen;
-                blue += image[i - 1][j - 1].rgbtBlue;
-                counter++;
-            }
-            if (i - 1 >= 0)
-            {
-                red += image[i - 1][j].rgbtRed;
-                green += image[i - 1][j].rgbtGreen;
-                blue += image[i - 1][j].rgbtBlue;
-                counter++;
-            }
-            if (i - 1 >= 0 && j + 1 < width)
-            {
-                red += image[i - 1][j + 1].rgbtRed;
-                green += image[i - 1][j + 1].rgbtGreen;
-                blue += image[i - 1][j + 1].rgbtBlue;
-                counter++;
-            }
-            if (j - 1 >= 0)
-            {
-                red += image[i][j - 1].rgbtRed;
-                green += image[i][j - 1].rgbtGreen;
-                blue += image[i][j - 1].rgbtBlue;
-                counter++;
-            }
-            if (j + 1 < width)
-            {
-                red += image[i][j + 1].rgbtRed;
-                green += image[i][j + 1].rgbtGreen;
-                blue += image[i][j + 1].rgbtBlue;
-                counter++;
-            }
-            if (i + 1 < height)
-            {
-                red += image[i + 1][j].rgbtRed;
-                green += image[i + 1][j].rgbtGreen;
-                blue += image[i + 1][j].rgbtBlue;
-                counter++;
-            }
-            if (i + 1 < height && j - 1 >= 0)
-            {
-                red += image[i + 1][j - 1].rgbtRed;
-                green += image[i + 1][j - 1].rgbtGreen;
-                blue += image[i + 1][j - 1].rgbtBlue;
-                counter++;
-            }
-            if (i + 1 < height && j + 1 < width)
-            {
-                red += image[i + 1][j + 1].rgbtRed;
-                green += image[i + 1][j + 1].rgbtGreen;
-                blue += image[i + 1][j + 1].rgbtBlue;
-                counter++;
-            }
+         
 
             image[i][j].rgbtRed = floor(red / counter);
             image[i][j].rgbtGreen = floor(green / counter);
