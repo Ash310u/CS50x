@@ -91,6 +91,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+{
+    // Create a copy of image
+
+    RGBTRIPLE copy[height][width];
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+}
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
@@ -107,7 +119,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             blue += image[i][j].rgbtBlue;
             counter++;
 
-         
+
 
             image[i][j].rgbtRed = floor(red / counter);
             image[i][j].rgbtGreen = floor(green / counter);
