@@ -109,58 +109,58 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             if (i - 1 >= 0 && j - 1 >= 0)
             {
-                red = +image[i - 1][j - 1].rgbtRed;
-                green = +image[i - 1][j - 1].rgbtGreen;
-                blue = +image[i - 1][j - 1].rgbtBlue;
+                red += image[i - 1][j - 1].rgbtRed;
+                green += image[i - 1][j - 1].rgbtGreen;
+                blue += image[i - 1][j - 1].rgbtBlue;
                 counter++;
             }
             if (i - 1 >= 0)
             {
-                red = +image[i - 1][j].rgbtRed;
-                green = +image[i - 1][j].rgbtGreen;
-                blue = +image[i - 1][j].rgbtBlue;
+                red += image[i - 1][j].rgbtRed;
+                green += image[i - 1][j].rgbtGreen;
+                blue += image[i - 1][j].rgbtBlue;
                 counter++;
             }
             if (i - 1 >= 0 && j + 1 < width)
             {
-                red = +image[i - 1][j + 1].rgbtRed;
-                green = +image[i - 1][j + 1].rgbtGreen;
-                blue = +image[i - 1][j + 1].rgbtBlue;
+                red += image[i - 1][j + 1].rgbtRed;
+                green += image[i - 1][j + 1].rgbtGreen;
+                blue += image[i - 1][j + 1].rgbtBlue;
                 counter++;
             }
             if (j - 1 >= 0)
             {
-                red = +image[i][j - 1].rgbtRed;
-                green = +image[i][j - 1].rgbtGreen;
-                blue = +image[i][j - 1].rgbtBlue;
+                red += image[i][j - 1].rgbtRed;
+                green += image[i][j - 1].rgbtGreen;
+                blue += image[i][j - 1].rgbtBlue;
                 counter++;
             }
             if (j + 1 < width)
             {
-                red = +image[i][j + 1].rgbtRed;
-                green = +image[i][j + 1].rgbtGreen;
-                blue = +image[i][j + 1].rgbtBlue;
+                red += image[i][j + 1].rgbtRed;
+                green += image[i][j + 1].rgbtGreen;
+                blue += image[i][j + 1].rgbtBlue;
                 counter++;
             }
             if (i + 1 < height)
             {
-                red = +image[i + 1][j].rgbtRed;
-                green = +image[i + 1][j].rgbtGreen;
-                blue = +image[i + 1][j].rgbtBlue;
+                red += image[i + 1][j].rgbtRed;
+                green += image[i + 1][j].rgbtGreen;
+                blue += image[i + 1][j].rgbtBlue;
                 counter++;
             }
             if (i + 1 < height && j - 1 >= 0)
             {
-                red = +image[i + 1][j - 1].rgbtRed;
-                green =+ image[i + 1][j - 1].rgbtGreen;
-                blue = +image[i + 1][j - 1].rgbtBlue;
+                red += image[i + 1][j - 1].rgbtRed;
+                green += image[i + 1][j - 1].rgbtGreen;
+                blue += image[i + 1][j - 1].rgbtBlue;
                 counter++;
             }
             if (i + 1 < height && j + 1 < width)
             {
-                red = +image[i + 1][j + 1].rgbtRed;
-                green = +image[i + 1][j + 1].rgbtGreen;
-                blue = +image[i + 1][j + 1].rgbtBlue;
+                red += image[i + 1][j + 1].rgbtRed;
+                green += image[i + 1][j + 1].rgbtGreen;
+                blue += image[i + 1][j + 1].rgbtBlue;
                 counter++;
             }
 
