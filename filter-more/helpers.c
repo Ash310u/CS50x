@@ -107,8 +107,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     if(ni < 0 || ni > height && nj < 0 || nj > width)
                     {
                         red += 0
-                        green += 0
-                        green += 0
                     }
                     else if(ni >= 0 && ni <= height && nj >= 0 && nj <= width)
                     {
