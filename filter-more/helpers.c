@@ -168,6 +168,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int ni = i + di;
                     int nj = j + dj;
 
+
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
