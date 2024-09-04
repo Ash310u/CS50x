@@ -86,6 +86,66 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Detect edges
+// void edges(int height, int width, RGBTRIPLE image[height][width])
+// {
+//     RGBTRIPLE temp[height][width];
+
+//     const int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+//     const int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
+
+//     for (int i = 0; i < height; i++)
+//     {
+//         for (int j = 0; j < width; j++)
+//         {
+
+//             int redGx = 0, redGy = 0;
+//             int greenGx = 0, greenGy = 0;
+//             int blueGx = 0, blueGy = 0;
+
+//             for (int di = -1; di <= 1; di++)
+//             {
+//                 for (int dj = -1; dj <= 1; dj++)
+//                 {
+//                     int ni = i + di;
+//                     int nj = i + dj;
+
+//                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+//                     {
+//                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
+//                         redGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtRed;
+
+//                         greenGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
+//                         greenGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
+
+//                         blueGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
+//                         blueGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
+
+//                     }
+//                 }
+//             }
+
+//             int red = sqrt(redGx * redGx + redGy * redGy);
+//             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
+//             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
+
+
+//             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
+//             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
+//             temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
+//         }
+//     }
+
+//     for (int i = 0; i < height; i++)
+//     {
+//         for (int j = 0; j < width; j++)
+//         {
+//             image[i][j] = temp[i][j];
+//         }
+//     }
+
+//     return;
+// }
+
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
@@ -97,7 +157,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-
             int redGx = 0, redGy = 0;
             int greenGx = 0, greenGy = 0;
             int blueGx = 0, blueGy = 0;
@@ -107,7 +166,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 for (int dj = -1; dj <= 1; dj++)
                 {
                     int ni = i + di;
-                    int nj = i + dj;
+                    int nj = j + dj;
 
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
@@ -119,7 +178,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                         blueGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
                         blueGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
-
                     }
                 }
             }
@@ -128,7 +186,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
 
-
+            // Clamp the values to the range [0, 255]
             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
             temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
@@ -145,64 +203,3 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
     return;
 }
-
-// void edges(int height, int width, RGBTRIPLE image[height][width])
-// {
-//     RGBTRIPLE temp[height][width];
-
-//     const int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-//     const int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-
-//     for (int i = 0; i < height; i++)
-//     {
-//         for (int j = 0; j < width; j++)
-//         {
-//             int redGx = 0, redGy = 0;
-//             int greenGx = 0, greenGy = 0;
-//             int blueGx = 0, blueGy = 0;
-
-//             for (int di = -1; di <= 1; di++)
-//             {
-//                 for (int dj = -1; dj <= 1; dj++)
-//                 {
-//                     int ni = i + di;
-//                     int nj = j + dj;
-
-//                     // Check boundaries
-//                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
-//                     {
-//                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
-//                         redGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtRed;
-
-//                         greenGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
-//                         greenGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
-
-//                         blueGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
-//                         blueGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
-//                     }
-//                 }
-//             }
-
-//             // Calculate the magnitude of the gradient
-//             int red = sqrt(redGx * redGx + redGy * redGy);
-//             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
-//             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
-
-//             // Clamp the values to the range [0, 255]
-//             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
-//             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
-//             temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
-//         }
-//     }
-
-//     // Copy the temp array back into the original image
-//     for (int i = 0; i < height; i++)
-//     {
-//         for (int j = 0; j < width; j++)
-//         {
-//             image[i][j] = temp[i][j];
-//         }
-//     }
-
-//     return;
-// }
