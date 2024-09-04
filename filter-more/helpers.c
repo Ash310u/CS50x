@@ -97,9 +97,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+
             int redGx = 0, redGy = 0;
             int greenGx = 0, greenGy = 0;
             int blueGx = 0, blueGy = 0;
+
             for (int di = -1; di <= 1; di++)
             {
                 for (int dj = -1; dj <= 1; dj++)
@@ -109,14 +111,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
-                        redGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
-                        redGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
+                        redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
+                        redGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtRed;
 
-                        greenGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
-                        greenGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
+                        greenGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
+                        greenGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtGreen;
 
-                        blueGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
-                        blueGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
+                        blueGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
+                        blueGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
+
                     }
                 }
             }
@@ -125,11 +128,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
 
+
             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
-            temp[i][j].rgbtGreen = (blue > 255) ? 255 : blue;
+            temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
         }
     }
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -137,6 +142,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             image[i][j] = temp[i][j];
         }
     }
+
     return;
 }
 
