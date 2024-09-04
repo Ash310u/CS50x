@@ -134,13 +134,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
 
-            
+            // Clamp the value to the range [0, 255]
             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
             temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
         }
     }
 
+    // Copy the temp array back into the orignal image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
