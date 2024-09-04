@@ -96,7 +96,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     const color[3] =
     { 'rgbtRed',
       'rgbtGreen',
-      'rgbtBlue' }
+      'rgbtBlue' };
 
     for (int c = 0; c < 3; c++)
     {
@@ -104,8 +104,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int j = 0; j < width; j++)
             {
-                int red = 0, green = 0, blue = 0;
-
                 int gxCounter = 0;
                 int gyCounter = 0;
 
@@ -126,9 +124,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                             gyCounter = gx[1 + (di)][1 + (dj)] * (image[ni][nj].[color[c]]);
                         }
                     }
-                    temp[i][j].[color[c]]= ;
                 }
+                temp[i][j].[color[c]] = sqrt((gxCounter * gxCounter) + (gyCounter * gyCounter));
+
+                gxCounter = 0;
+                gyCounter = 0;
             }
         }
-        return;
     }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = temp[i][j];
+        }
+    }
+    return;
+}
