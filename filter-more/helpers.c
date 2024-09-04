@@ -90,6 +90,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
 
+    const gx = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
+    const gy = {-1, -2, -1, 0, 0, 0, 1, 2, 1};
+    int counter = 0;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
