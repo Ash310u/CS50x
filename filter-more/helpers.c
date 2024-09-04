@@ -113,18 +113,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int nj = j + dj;
 
                     // Check for out-of-bounds indcies
-                    if (ni < 0 && ni > height && nj < 0 && nj > width)
-                    {
-                        redGx += gx[di + 1][dj + 1] * 0;
-                        redGy += gy[di + 1][dj + 1] * 0;
-
-                        greenGx += gx[di + 1][dj + 1] * 0;
-                        greenGy += gy[di + 1][dj + 1] * 0;
-
-                        blueGx += gx[di + 1][dj + 1] * 0;
-                        blueGy += gy[di + 1][dj + 1] * 0;
-                    }
-                    else if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+                    if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         // Apply Sobel filter for each color channel
                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
@@ -140,9 +129,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate the magnitude of the gradient
-            int red = sqrt(redGx * redGx + redGy * redGy);
-            int green = sqrt(greenGx * greenGx + greenGy * greenGy);
-            int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
+            int red = round(sqrt(redGx * redGx + redGy * redGy));
+            int green = round(sqrt(greenGx * greenGx + greenGy * greenGy));
+            int blue = round(sqrt(blueGx * blueGx + blueGy * blueGy));
 
             // Clamp the value to the range [0, 255]
             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
