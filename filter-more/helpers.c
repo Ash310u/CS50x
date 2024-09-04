@@ -110,14 +110,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     if (ni >= 0 && ni <= height && nj >= 0 && nj <= width)
                     {
-                        redGx = gx[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
-                        redGy = gy[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
+                        redGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
+                        redGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtRed);
 
-                        greenGx = gx[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
-                        greenGy = gy[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
+                        greenGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
+                        greenGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtGreen);
 
-                        blueGx = gx[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
-                        blueGy = gy[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
+                        blueGx += gx[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
+                        blueGy += gy[di + 1][dj + 1] * (image[ni][nj].rgbtBlue);
                     }
                 }
             }
