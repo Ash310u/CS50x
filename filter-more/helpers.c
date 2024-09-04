@@ -93,43 +93,37 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     const int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     const int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
-    const color[3] =
-    { 'rgbtRed',
-      'rgbtGreen',
-      'rgbtBlue' };
-
-    for (int c = 0; c < 3; c++)
+    for (int i = 0; i < height; i++)
     {
-        for (int i = 0; i < height; i++)
+        int redGx = 0, redGy = 0;
+        int greenGx = 0, greenGy = 0;
+        int blueGx = 0, blueGy = 0;
+
+        for (int j = 0; j < width; j++)
         {
-            for (int j = 0; j < width; j++)
+            for (int di = -1; di <= 1; di++)
             {
-                int gxCounter = 0;
-                int gyCounter = 0;
-
-                for (int di = -1; di <= 1; di++)
+                for (int dj = -1; dj <= 1; dj++)
                 {
-                    for (int dj = -1; dj <= 1; dj++)
-                    {
-                        int ni = i + di;
-                        int nj = i + dj;
+                    int ni = i + di;
+                    int nj = i + dj;
 
-                        if (ni < 0 || ni > height && nj < 0 || nj > width)
-                        {
-                            gxCounter = gx[1 + (di)][1 + (dj)] * (image[ni][nj].[color[c]]);
-                        }
-                        else if (ni >= 0 && ni <= height && nj >= 0 && nj <= width)
-                        {
-                            gxCounter = gx[1 + (di)][1 + (dj)] * (image[ni][nj].[color[c]]);
-                            gyCounter = gx[1 + (di)][1 + (dj)] * (image[ni][nj].[color[c]]);
-                        }
+                    if (ni >= 0 && ni <= height && nj >= 0 && nj <= width)
+                    {
+                        redGx = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtRed);
+                        redGy = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtRed);
+
+                        greenGx = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtGreen);
+                        greenGy = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtGreen);
+
+                        blueGx = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtBlue);
+                        blueGy = gx[1 + (di)][1 + (dj)] * (image[ni][nj].rgbtBlue);
                     }
                 }
-                temp[i][j].[color[c]] = sqrt((gxCounter * gxCounter) + (gyCounter * gyCounter));
-
-                gxCounter = 0;
-                gyCounter = 0;
             }
+            temp[i][j].rgbtRed = sqrt((redGx * redGx) + (redGy * redGy));
+            temp[i][j].rgbtGreen = sqrt((greenGx * greenGx) + (greenGy * greenGy));
+            temp[i][j].rgbtGreen = sqrt((blueGx * blueGx) + (blueGy * blueGy));
         }
     }
     for (int i = 0; i < height; i++)
