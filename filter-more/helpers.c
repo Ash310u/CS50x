@@ -90,19 +90,21 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
 
+    // Define Sobel kernels
     const int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     const int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
+    // Iterate over each pixel in the image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
 
-            // 3x3 kernels
             int redGx = 0, redGy = 0;
             int greenGx = 0, greenGy = 0;
             int blueGx = 0, blueGy = 0;
 
+            // Iterate over the 3x3 grid around the pixel
             for (int di = -1; di <= 1; di++)
             {
                 for (int dj = -1; dj <= 1; dj++)
@@ -110,8 +112,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int ni = i + di;
                     int nj = j + dj;
 
+                    // Check for out-of-bounds indcies
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
+                        // Apply Sobel filter for each color channel
                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
                         redGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtRed;
 
@@ -125,11 +129,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
+            // Calculate the magnitude of the gradient
             int red = sqrt(redGx * redGx + redGy * redGy);
             int green = sqrt(greenGx * greenGx + greenGy * greenGy);
             int blue = sqrt(blueGx * blueGx + blueGy * blueGy);
 
-
+            
             temp[i][j].rgbtRed = (red > 255) ? 255 : red;
             temp[i][j].rgbtGreen = (green > 255) ? 255 : green;
             temp[i][j].rgbtBlue = (blue > 255) ? 255 : blue;
