@@ -90,8 +90,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
 
-    const gx[3][3] = { {-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-    const gy[3][3] = { {-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
+    const gx[3][3] = { {-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1} };
+    const gy[3][3] = { {-1, -2, -1}, {0, 0, 0}, {1, 2, 1} };
     int counter = 0;
 
     for (int i = 0; i < height; i++)
@@ -106,6 +106,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int ni = i + di;
                     int nj = i + dj;
+
+                    gx[1 + (di)][1 + (dj)]
+                    gy[1 + (di)][1 + (dj)]
+
                     if (ni < 0 || ni > height && nj < 0 || nj > width)
                     {
                         red += 0 green += 0 blue += 0
