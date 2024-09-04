@@ -90,8 +90,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE temp[height][width];
 
-    const gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-    const gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
+    const int gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+    const int gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
     const color[3] =
     { 'rgbtRed',
