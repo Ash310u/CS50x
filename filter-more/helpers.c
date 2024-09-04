@@ -98,6 +98,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
 
+            // 3x3 kernels
             int redGx = 0, redGy = 0;
             int greenGx = 0, greenGy = 0;
             int blueGx = 0, blueGy = 0;
