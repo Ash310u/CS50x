@@ -113,7 +113,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int nj = j + dj;
 
                     // Check for out-of-bounds indcies
-                    if (ni >= 0 && ni < height && nj >= 0 && nj < width)
+                    if (ni < 0 && ni > height && nj < 0 && nj > width)
+                    {
+                        redGx += gx[di + 1][dj + 1] * 0;
+                        redGy += gy[di + 1][dj + 1] * 0;
+
+                        greenGx += gx[di + 1][dj + 1] * 0;
+                        greenGy += gy[di + 1][dj + 1] * 0;
+
+                        blueGx += gx[di + 1][dj + 1] * 0;
+                        blueGy += gy[di + 1][dj + 1] * 0;
+                    }
+                    else if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         // Apply Sobel filter for each color channel
                         redGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtRed;
@@ -124,7 +135,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                         blueGx += gx[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
                         blueGy += gy[di + 1][dj + 1] * image[ni][nj].rgbtBlue;
-
                     }
                 }
             }
