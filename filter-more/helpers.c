@@ -126,6 +126,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                             gyCounter = gx[1 + (di)][1 + (dj)] * (image[ni][nj].[color[c]]);
                         }
                     }
+                    temp[i][j].rgbtRed = ;
+                    temp[i][j].rgbtGreen = green / counter;
+                    temp[i][j].rgbtBlue = blue / counter;
                 }
             }
         }
