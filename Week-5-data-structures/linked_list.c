@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 
     for (int i = 1; i < argc; i++)
     {
-        printf("%s\n", argv[i]);
+        int number = a
+        printf("%i\n", argv[i]);
     }
 }
