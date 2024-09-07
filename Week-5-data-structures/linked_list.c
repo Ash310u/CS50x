@@ -10,12 +10,20 @@ typedef struct node
 int main(int argc, char *argv[])
 {
     node *list = NULL;
-    node *n
 
     for (int i = 1; i < argc; i++)
     {
         int number = atoi(argv[i]);
-        n->number = number
+
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            // Free memory thus far
+            return 1;
+        }
+
+////////// (*n).number = n->number //////////
+        n->number = number;
         printf("%i\n", number);
     }
 }
