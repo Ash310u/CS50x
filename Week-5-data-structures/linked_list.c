@@ -10,10 +10,12 @@ typedef struct node
 int main(int argc, char *argv[])
 {
     node *list = NULL;
+    node *n
 
     for (int i = 1; i < argc; i++)
     {
-        int number = a
-        printf("%i\n", argv[i]);
+        int number = atoi(argv[i]);
+        n->number = number
+        printf("%i\n", number);
     }
 }
