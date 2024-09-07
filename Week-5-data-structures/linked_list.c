@@ -9,5 +9,10 @@ typedef struct node
 
 int main(int agrc, char *argv[])
 {
+    node *list = NULL;
 
+    for (int i = 1; i < argc; i++)
+    {
+        printf("%s\n", argv[i]);
+    }
 }
