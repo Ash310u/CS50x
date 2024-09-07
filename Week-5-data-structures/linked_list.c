@@ -24,13 +24,10 @@ int main(int argc, char *argv[])
 
 ////////// (*n).number = n->number //////////
         n->number = number;
-        n->next = NULL;
+        n->next = list;
 
-        if (list == NULL)
-        {
-            list = n;
-        }
-        
+        list = n;
+
 
         printf("%i\n", number);
     }
