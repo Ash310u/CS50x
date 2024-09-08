@@ -25,9 +25,9 @@ int main(int argc, char *argv[])
 ////////// (*n).number = n->number //////////
         n->number = number;
         n->next = list;
-
         list = n;
 
+        node *ptr
 
         printf("%i\n", number);
     }
