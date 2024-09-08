@@ -28,11 +28,10 @@ int main(int argc, char *argv[])
         list = n;
 
         node *ptr = list;
-        while(prt->next == NULL)
+        while(ptr != NULL)
         {
-
+            printf("%i\n", ptr->number);
         }
 
-        printf("%i\n", number);
     }
 }
