@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
         while(ptr != NULL)
         {
             printf("%i\n", ptr->number);
-            break;
+            ptr = ptr->next;
         }
 
     }
