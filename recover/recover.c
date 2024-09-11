@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
     // While there's still data left to read from the memory card
-    while (fread(&buffer, sizeof(buffer), 512, card) != 512)
+    while (fread(&buffer, sizeof(buffer), 512, card) == 512)
     {
 
-        if (buffer[0] == 0xff)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[0] == 0xff )
         {
             printf("value: %u\n", buffer[1]);
         }
