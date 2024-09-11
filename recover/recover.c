@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef uint8_t BYTE;
 int main(int argc, char *argv[])
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 
         if (buffer[0] == 0xff)
         {
-            printf("value: %u\n",buffer[0])
+            printf("value: %u\n",buffer[1]);
         }
 
         // fwrite(&b, sizeof(b), 1, dst)
