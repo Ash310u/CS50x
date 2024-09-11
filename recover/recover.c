@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
         printf("Error: Could not open file\n");
         return 1;
     }
+
     // While there's still data left to read from the memory card
 
         // Create JPEGs from the data
