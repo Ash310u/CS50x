@@ -16,9 +16,13 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     while (fread(&buffer, sizeof(buffer), 512, src) != 0)
     {
-        if (b )
 
-        fwrite(&b, sizeof(b), 1, dst)
+        if (buffer[0] == 0xff)
+        {
+            printf("value: %u\n",buffer[0])
+        }
+
+        // fwrite(&b, sizeof(b), 1, dst)
     }
     // While there's still data left to read from the memory card
 
