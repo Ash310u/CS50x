@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     BYTE b;
     while (fread(&b, sizeof(b), 1, src) != 0)
     {
-        if (b == )
+        if (b )
 
         fwrite(&b, sizeof(b), 1, dst)
     }
