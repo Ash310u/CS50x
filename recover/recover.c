@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     // Accept a single command-line argument
@@ -12,6 +13,13 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    BYTE b;
+    while (fread(&b, sizeof(b), 1, src) != 0)
+    {
+        if (b == )
+
+        fwrite(&b, sizeof(b), 1, dst)
+    }
     // While there's still data left to read from the memory card
 
         // Create JPEGs from the data
