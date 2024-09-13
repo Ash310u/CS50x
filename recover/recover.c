@@ -23,15 +23,15 @@ int main(int argc, char *argv[])
 
     int filefound = 0;
     // While there's still data left to read from the memory card
-    while (fread(&buffer, sizeof(buffer), 512, card) == 512)
+    while (fread(buffer, 1, 512, card) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if(filefound != 0)
-            {
-                if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+            // if(filefound != 0)
+            // {
+            //     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
 
-            } else {
+            // } else {
 
                 // Create JPEGs from the data
                 char filename[8];
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
                 FILE *img = fopen(filename, "w");
                 fwrite(&buffer, sizeof(buffer), 512, img);
-            }
+            // }
         }
         return 0;
 
