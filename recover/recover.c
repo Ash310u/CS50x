@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main(int argc, char *argv[])
 {
@@ -22,26 +23,27 @@ int main(int argc, char *argv[])
     // Create a buffer for a block of data
     uint8_t buffer[512];
 
-    int filefound = 0;
+    bool found_JPEG = false;
+    int file_count = 0;
     // While there's still data left to read from the memory card
     while (fread(buffer, 1, 512, card) == 512)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // if(filefound != 0)
-            // {
-            //     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+            if(found_JPEG != 0)
+            {
+                if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
 
-            // } else {
+            } else {
 
                 // Create JPEGs from the data
                 char filename[8];
-                sprintf(filename, "%03i.jpg", filefound);
-                filefound++;
+                sprintf(filename, "%03i.jpg", file_count);
+                file_count++;
 
                 FILE *img = fopen(filename, "w");
                 fwrite(&buffer, sizeof(buffer), 512, img);
-            // }
+            }
         }
         return 0;
 
