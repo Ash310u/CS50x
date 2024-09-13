@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     }
 
     bool found_JPEG = false;
-    char filename[8];
     int file_count = 0;
+    char filename[8];
 
     // Create a buffer for a block of data
     uint8_t buffer[512];
@@ -44,7 +44,13 @@ int main(int argc, char *argv[])
             }
             // Create JPEGs from the data
             sprintf(filename, "%03i.jpg", file_count);
-            FILE *img = fopen(filename, "w");
+            outptr = fopen(filename, "w");
+            if (outptr == NULL)
+            {
+                fclose(card);
+                printf("Could not open %s.\n", argv[1]);
+                return 1;
+            }
             file_count++;
             fwrite(&buffer, sizeof(buffer), 512, img);
         }
