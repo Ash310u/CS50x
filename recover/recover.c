@@ -31,7 +31,8 @@ int main(int argc, char *argv[])
     // While there's still data left to read from the memory card
     while (fread(buffer, 512, 1, card) == 1)
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
         {
             if (found_JPEG)
             {
@@ -52,13 +53,15 @@ int main(int argc, char *argv[])
             }
             file_count++;
         }
-    }
-    if(found_JPEG)
-    {
-        while (fread(buffer, 1, 512, card) == 512)
+        if (found_JPEG)
         {
-            fwrite(&buffer, sizeof(buffer), 512, img);
-
+            fwrite(buffer, 512, 1, outptr);
         }
     }
+    fclose(card);
+    if(found_JPEG)
+    {
+        fclose(outptr);
+    }
+    return 0;
 }
