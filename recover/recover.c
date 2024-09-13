@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     if (card == NULL)
     {
         printf("Could not open %s.\n", argv[1]);
-        return 1;
+        return 2;
     }
 
     bool found_JPEG = false;
@@ -48,12 +48,12 @@ int main(int argc, char *argv[])
             if (outptr == NULL)
             {
                 fclose(card);
-                printf("Could not open %s.\n", argv[1]);
-                return 1;
+                printf("Could not open %s.\n", filename);
+                return 3;
             }
             file_count++;
-            fwrite(&buffer, sizeof(buffer), 512, img);
         }
+        fwrite(&buffer, sizeof(buffer), 512, img);
         return 0;
     }
 }
